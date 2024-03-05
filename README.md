@@ -19,7 +19,7 @@ The Satellite Emergency Response System comprises a set of AI agents simulating 
 1. Clone the repository:
 
 ```python
-git clone https://github.com/satellite-emergency-response-system.git
+git clone https://github.com/buaa-ysw/Satellite-Dispatch.git
 ```
 
 2. Install dependencies:
