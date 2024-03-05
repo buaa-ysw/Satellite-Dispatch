@@ -49,7 +49,7 @@ class SatelliteCrew:
 if __name__ == "__main__":
     print("## Satellite Dispatch Here")
     print("-------------------------------")
-    disaster = input(dedent("""We will be modelling a satellite scheduling mission following a disaster, please describe in detail the nature and scale of the disaster:"""))
+    disaster = input(dedent("""We will be modelling a satellite scheduling mission following a disaster, please describe in detail the TYPE, SCALE and TIME of the disaster:"""))
 
     satellite_crew = SatelliteCrew(disaster)
     result = satellite_crew.run()
