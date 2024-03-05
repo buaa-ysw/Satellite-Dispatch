@@ -33,6 +33,7 @@ class SatelliteTasks:
                 - **Operational status:**
                 During operation, communication is slightly interrupted.
                 -------------------------
+                \nPlease avoid discussing the impact of an event in this report, but simply describing what happened.
                 """),
             async_execution=False,
             agent=agent,
@@ -62,6 +63,7 @@ class SatelliteTasks:
                 - **Operational status:**
                 Normal operation, continuous transmission of critical data.
                 -------------------------
+                \nPlease avoid discussing the impact of an event in this report, but simply describing what happened.
                 """),
             async_execution=False,
             agent=agent,
@@ -95,6 +97,7 @@ class SatelliteTasks:
                 - **Operational status:**
                 Maintaining functionality with intermittent disruptions due to high demand.
                 -------------------------
+                \nPlease avoid discussing the impact of an event in this report, but simply describing what happened.
                 """),
             async_execution=False,
             agent=agent,
@@ -128,6 +131,7 @@ class SatelliteTasks:
                 - **Operational status:**
                 Normal operation, providing accurate positioning and navigation assistance to support emergency response efforts.
                 -------------------------
+                \nPlease avoid discussing the impact of an event in this report, but simply describing what happened.
                 """),
             async_execution=False,
             agent=agent,
