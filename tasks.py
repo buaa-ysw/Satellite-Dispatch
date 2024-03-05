@@ -9,17 +9,30 @@ class SatelliteTasks:
         return Task(
             description=dedent(f"""
                 Disaster situation: {disaster}
-                Live reports from the scene as they come back from reporters: {report}
+                Live reports from the scene as they come back from the front lines: {report}
                 Mission: 
-                extract remote sensing information from the reports returned by reporters on the scene,
-                determine the damage to facilities and the escape of people in the affected area, 
+                extract remote sensing information from the reports on the scene,
+                determine the ground conditions in the affected area, 
                 self-test and adjust the operating status, 
-                and report this in a timely manner to 'The Conductor Agent' and 'The Recoder Agent'.
+                and report these in a timely manner to 'The Recoder Agent'.
                 {self.__tip_section()}
                 """),
             expected_output=dedent("""
-                Detailed report document on the damage to facilities and the escape of people in the affected area, with specific post-disaster timetable
-                It is prohibited to include content that is not relevant to the task!
+                Detailed report document on the ground conditions in the affected area, with specific post-disaster timetable
+                \n[Below is an example]
+                -------------------------
+                Earth Observation Satellite
+                - **Damage to Facilities:**
+                [11: 25 (10minutes after)] Buildings collapse, roads destroyed, infrastructure severely damaged.
+                [12: 12 (57minutes after)] Supplies airdropped to isolated areas, temporary bridges constructed for access.
+                ......
+                - **Escape of People:**
+                [11: 19 (4minutes after)] Survivors fleeing on foot, seeking shelter in open spaces.
+                [12: 26 (1hour 11minutes after)] Volunteer groups and rescue teams accessing remote mountainous areas.
+                ......
+                - **Operational status:**
+                During operation, communication is slightly interrupted.
+                -------------------------
                 """),
             async_execution=True,
             agent=agent,
@@ -29,17 +42,26 @@ class SatelliteTasks:
         return Task(
             description=dedent(f"""
                 Disaster situation: {disaster}
-                Live reports from the scene as they come back from reporters: {report}
+                Live reports from the scene as they come back from the front lines: {report}
                 Mission: 
-                extract remote sensing information from the reports returned by reporters on the scene,
-                determine the present and possible future weather conditions in the affected area,
+                extract remote sensing information from the reports on the scene,
+                determine the weather changes in the affected area,
                 self-test and adjust the operating status, 
-                and report this in a timely manner to 'The Conductor Agent' and 'The Recoder Agent'.
+                and report these in a timely manner to 'The Recoder Agent'.
                 {self.__tip_section()}
                 """),
             expected_output=dedent("""
-                Detailed report document on the present and possible future weather conditions in the affected area, with specific post-disaster timetable
-                It is prohibited to include content that is not relevant to the task!
+                Detailed report document on the weather changes in the affected area, with specific post-disaster timetable
+                \n[Below is an example]
+                -------------------------
+                Weather Monitoring Satellite
+                - **Weather changes**
+                [11: 30(15minutes after)] Light rain, heavy fog, and low visibility affect the evacuation of people and rescue in disaster areas.
+                [12: 02(47minutes after)] The rain has stopped, the fog has disappeared, and the temperature and humidity are good, which is conducive to rescue.
+                ......
+                - **Operational status:**
+                Normal operation, continuous transmission of critical data.
+                -------------------------
                 """),
             async_execution=True,
             agent=agent,
@@ -49,17 +71,30 @@ class SatelliteTasks:
         return Task(
             description=dedent(f"""
                 Disaster situation: {disaster}
-                Live reports from the scene as they come back from reporters: {report}
+                Live reports from the scene as they come back from the front lines: {report}
                 Mission: 
-                extract remote sensing information from the reports returned by reporters on the scene,
-                determine the rescue communications status and mass communications signals in the affected area,
+                extract remote sensing information from the reports on the scene,
+                determine the communication status in the affected area,
                 self-test and adjust the operating status, 
-                and report this in a timely manner to 'The Conductor Agent' and 'The Recoder Agent'.
+                and report these in a timely manner to 'The Recoder Agent'.
                 {self.__tip_section()}
                 """),
             expected_output=dedent("""
-                Detailed report document on the rescue communications status and mass communications signals in the affected area, with specific post-disaster timetable
-                It is prohibited to include content that is not relevant to the task!
+                Detailed report document on the communication status in the affected area, with specific post-disaster timetable
+                \n[Below is an example]
+                -------------------------
+                Communication Satellite
+                - **Communication Coverage:**
+                [11:35 (20 minutes after)] Communication channels overloaded, intermittent disruptions reported.
+                [12:10 (55 minutes after)] Additional bandwidth allocated to prioritize emergency communication, restoring connectivity in affected areas.
+                ......
+                - **Emergency Communication Services:**
+                [11:40 (25 minutes after)] Emergency hotlines established for affected populations to request assistance.
+                [12:15 (1 hour after)] Satellite terminals deployed for remote communities without access to terrestrial communication.
+                ......
+                - **Operational status:**
+                Maintaining functionality with intermittent disruptions due to high demand.
+                -------------------------
                 """),
             async_execution=True,
             agent=agent,
@@ -69,35 +104,31 @@ class SatelliteTasks:
         return Task(
             description=dedent(f"""
                 Disaster situation: {disaster}
-                Live reports from the scene as they come back from reporters: {report}
+                Live reports from the scene as they come back from the front lines: {report}
                 Mission: 
-                extract remote sensing information from the reports returned by reporters on the scene,
-                determine the present and possible future weather conditions in the affected area,
+                extract remote sensing information from the reports on the scene,
+                determine the navigation status in the affected area,
                 self-test and adjust the operating status, 
-                and report this in a timely manner to 'The Conductor Agent' and 'The Recoder Agent'.
+                and report these in a timely manner to 'The Recoder Agent'.
                 {self.__tip_section()}
                 """),
             expected_output=dedent("""
-                Detailed report document on the navigation signal information (e.g. GPS and BDS) in the affected area, with specific post-disaster timetable
-                It is prohibited to include content that is not relevant to the task!
+                Detailed report document on the navigation status in the affected area, with specific post-disaster timetable
+                \n[Below is an example]
+                -------------------------
+                Navigation Satellite
+                - **Search and Rescue Operations:**
+                [11:45 (30 minutes after)] Precise positioning data provided to guide search and rescue teams to affected areas.
+                [12:20 (1 hour 5 minutes after)] Evacuation routes mapped out to ensure safe passage for displaced populations.
+                ......
+                - **Coordination of Emergency Response:**
+                [11:50 (35 minutes after)] Emergency response teams equipped with GPS devices to navigate through debris and rubble.
+                [12:25 (1 hour 10 minutes after)] Coordination of helicopter rescue missions using satellite-based navigation systems.
+                ......
+                - **Operational status:**
+                Normal operation, providing accurate positioning and navigation assistance to support emergency response efforts.
+                -------------------------
                 """),
-            async_execution=True,
-            agent=agent,
-        )
-        
-    def operation_conducting_task(self, agent, disaster, report):
-        return Task(
-            description=dedent(f"""
-                Disaster situation: {disaster}
-                Live reports from the scene as they come back from reporters: {report}
-                Mission: 
-                Receive reports from the four Satellites and check that the content is sufficiently specific and detailed, 
-                urge satellites to add as much detail to their reports as possible, which is very important, 
-                and provide a detailed report to 'the Recoder Agent' for the post-disaster satellite emergency report.
-                {self.__tip_section()}
-                """),
-            expected_output=dedent("""
-                Recommendations for changes to each satellite and a detailed report on the satellite's operational status"""),
             async_execution=True,
             agent=agent,
         )
@@ -107,13 +138,65 @@ class SatelliteTasks:
             description=dedent(f"""
                 Disaster situation: {disaster}
                 Mission:
-                Collect reports from all Satellites and The Conductor Agent, including 'The Earth Observation Satellite', 'The Weather Monitoring Satellite', 'The Communication Satellite', 'The Navigation Satellite', and 'The Conductor Agent',
-                prepare a specific and detailed post-disaster emergency response report, sufficient detail on the status of the affected areas and the operation of the satellites is important! And focus the record on the reports of the Satellites.
-                Listing the coverage of each Satellite in chronological order, to enable government departmental staff to better review and improve their subsequent work on disaster relief.
+                Collect reports from all Satellites, including 'The Earth Observation Satellite', 'The Weather Monitoring Satellite', 'The Communication Satellite' and 'The Navigation Satellite',
+                prepare a specific and detailed post-disaster emergency response report,focusing on the reports of the Satellites,
+                to enable government departmental staff to better review and improve their subsequent work on disaster relief.
                 {self.__tip_section()}
                 """),
             expected_output=dedent("""
-                A comprehensive post-disaster emergency response report, in standard markdown format"""),
+                A comprehensive post-disaster emergency response report, in standard markdown format
+                \n[Below is an example]
+                -------------------------
+                # Post-disaster satellite emergency reporting
+                ## Disaster Situation
+                The magnitude 8 earthquake struck Wenchuan, Sichuan, causing significant destruction and trapping individuals in the affected area.
+                ......
+                ## Satellite Reports
+                ### Earth Observation Satellite
+                - **Damage to Facilities:**
+                [11: 25 (10minutes after)] Buildings collapse, roads destroyed, infrastructure severely damaged.
+                [12: 12 (57minutes after)] Supplies airdropped to isolated areas, temporary bridges constructed for access.
+                ......
+                - **Escape of People:**
+                [11: 19 (4minutes after)] Survivors fleeing on foot, seeking shelter in open spaces.
+                [12: 26 (1hour 11minutes after)] Volunteer groups and rescue teams accessing remote mountainous areas.
+                ......
+                - **Operational status:**
+                During operation, communication is slightly interrupted.
+                ### Weather Monitoring Satellite
+                - **Weather changes**
+                [11: 30(15minutes after)] Light rain, heavy fog, and low visibility affect the evacuation of people and rescue in disaster areas.
+                [12: 02(47minutes after)] The rain has stopped, the fog has disappeared, and the temperature and humidity are good, which is conducive to rescue.
+                ......
+                - **Operational status:**
+                Normal operation, continuous transmission of critical data.
+                ### Communication Satellite
+                - **Communication Coverage:**
+                [11:35 (20 minutes after)] Communication channels overloaded, intermittent disruptions reported.
+                [12:10 (55 minutes after)] Additional bandwidth allocated to prioritize emergency communication, restoring connectivity in affected areas.
+                ......
+                - **Emergency Communication Services:**
+                [11:40 (25 minutes after)] Emergency hotlines established for affected populations to request assistance.
+                [12:15 (1 hour after)] Satellite terminals deployed for remote communities without access to terrestrial communication.
+                ......
+                - **Operational status:**
+                Maintaining functionality with intermittent disruptions due to high demand.
+                ### Navigation Satellite
+                - **Search and Rescue Operations:**
+                [11:45 (30 minutes after)] Precise positioning data provided to guide search and rescue teams to affected areas.
+                [12:20 (1 hour 5 minutes after)] Evacuation routes mapped out to ensure safe passage for displaced populations.
+                ......
+                - **Coordination of Emergency Response:**
+                [11:50 (35 minutes after)] Emergency response teams equipped with GPS devices to navigate through debris and rubble.
+                [12:25 (1 hour 10 minutes after)] Coordination of helicopter rescue missions using satellite-based navigation systems.
+                ......
+                - **Operational status:**
+                Normal operation, providing accurate positioning and navigation assistance to support emergency response efforts.
+                ## Summary
+                The Satellite Emergency Response System has played a crucial role in supporting disaster response and recovery efforts following the magnitude 8 earthquake in Wenchuan, Sichuan. Earth observation satellites provided detailed imagery of the disaster area, facilitating damage assessment and response planning. Weather monitoring satellites monitored atmospheric conditions, enabling timely forecasts to aid in evacuation and rescue operations. Communication satellites ensured continuous connectivity, prioritizing emergency communication services to support coordination and assistance efforts. Navigation satellites provided precise positioning and navigation assistance, guiding search and rescue teams and facilitating the evacuation of affected populations.
+                Despite challenges such as communication disruptions and adverse weather conditions, the Satellite Emergency Response System demonstrated resilience and effectiveness in providing critical support during this disaster. Moving forward, the insights gained from this experience will inform future improvements and optimizations to enhance the system's capabilities for mitigating the impact of natural disasters and protecting vulnerable communities.
+                -------------------------
+                """),
             agent=agent,
             context=context,
         )
