@@ -92,7 +92,7 @@ class SatelliteAgents:
             verbose=True,
             llm=self.OpenAIGPT35,
             memory=True,
-            max_rpm=10,
+            max_rpm=8,
             max_iter=5,
             allow_delegation=True
         )
@@ -100,7 +100,7 @@ class SatelliteAgents:
     def recoder_agent(self):
         return Agent(
             role='Post-disaster Recorder',
-            goal='Record and summarise information and operational status of individual satellites at different points in time to compile the final post-disaster emergency response report',
+            goal='Record report information and operational status of individual Satellites at different points in time to compile the final post-disaster emergency response report',
             backstory=dedent("""
                 Attention! A major natural disaster is currently occurring!
                 As a Post-disaster Recorder, you will receive real-time reports from each Satellite and The Conductor Agent.

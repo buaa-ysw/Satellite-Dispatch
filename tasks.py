@@ -83,13 +83,11 @@ class SatelliteTasks:
                 Disaster situation: {disaster}
                 Live reports from the scene as they come back from reporters: {report}
                 Mission: 
-                check and revise the reports handed in by the satellites and submit a summary of the results to 'The Recorder Agent',
-                declare the mission completion of each satellite, including the time of completion and the state of the satellite at that time, 
+                Receive reports from the four Satellites and check that the content is sufficiently specific and detailed, 
+                urge satellites to add as much detail to their reports as possible, which is very important, 
                 and provide a detailed report to 'the Recoder Agent' for the post-disaster satellite emergency report.
                 {self.__tip_section()}
                 """),
-            expected_output=dedent("""
-                Detailed report document on the state of each satellite at each moment from the onset of the disaster to the mission completion, down to the minute."""),
             async_execution=True,
             agent=agent,
         )
@@ -99,9 +97,9 @@ class SatelliteTasks:
             description=dedent(f"""
                 Disaster situation: {disaster}
                 Mission:
-                Collect reports from all Satellites and The Conductor Agent,
-                prepare a specific and detailed post-disaster emergency response report,
-                to enable government departmental staff to better review and improve their subsequent work on disaster relief.
+                Collect reports from all Satellites and The Conductor Agent, including 'The Earth Observation Satellite', 'The Weather Monitoring Satellite', 'The Communication Satellite', 'The Navigation Satellite', and 'The Conductor Agent',
+                prepare a specific and detailed post-disaster emergency response report, sufficient detail on the status of the affected areas and the operation of the satellites is important! And focus the record on the reports of the Satellites.
+                Listing the coverage of each Satellite in chronological order, to enable government departmental staff to better review and improve their subsequent work on disaster relief.
                 {self.__tip_section()}
                 """),
             expected_output=dedent("""
