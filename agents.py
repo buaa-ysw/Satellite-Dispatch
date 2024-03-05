@@ -16,7 +16,7 @@ class SatelliteAgents:
             verbose=True,
             llm=self.model,
             memory=True,
-            max_rpm=10,
+            max_rpm=3,
             max_iter=5,
             allow_delegation=False
         )
@@ -33,7 +33,7 @@ class SatelliteAgents:
             verbose=True,
             llm=self.model,
             memory=True,
-            max_rpm=10,
+            max_rpm=3,
             max_iter=5,
             allow_delegation=False
         )
@@ -50,7 +50,7 @@ class SatelliteAgents:
             verbose=True,
             llm=self.model,
             memory=True,
-            max_rpm=10,
+            max_rpm=3,
             max_iter=5,
             allow_delegation=False
         )
@@ -67,7 +67,7 @@ class SatelliteAgents:
             verbose=True,
             llm=self.model,
             memory=True,
-            max_rpm=10,
+            max_rpm=3,
             max_iter=5,
             allow_delegation=False
         )
@@ -85,7 +85,7 @@ class SatelliteAgents:
             verbose=True,
             llm=self.model,
             memory=True,
-            max_rpm=8,
+            max_rpm=3,
             max_iter=5,
             allow_delegation=True
         )
@@ -103,7 +103,7 @@ class SatelliteAgents:
             verbose=True,
             llm=self.model,
             memory=True,
-            max_rpm=10,
+            max_rpm=3,
             max_iter=5,
             allow_delegation=False
         )

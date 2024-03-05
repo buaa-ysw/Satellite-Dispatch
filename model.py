@@ -25,7 +25,7 @@ model_name = config.get('models', 'using_model')
 if model_name == 'ollama_openhermes':
     using_model = Ollama(model="openhermes")
 elif model_name == 'gpt-3.5-turbo':
-    using_model = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1.0)
+    using_model = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.7)
     load_dotenv()
 else:
     raise ValueError("Unsupported default model name")
