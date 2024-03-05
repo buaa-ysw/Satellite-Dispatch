@@ -1,3 +1,6 @@
+from crewai import Agent, Task, Crew, Process
+from textwrap import dedent
+
 import configparser
 import os
 from dotenv import load_dotenv

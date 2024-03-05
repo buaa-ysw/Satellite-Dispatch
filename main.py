@@ -1,22 +1,14 @@
-import os
-from crewai import Agent, Task, Crew, Process
-from langchain_community.llms import Ollama
-from langchain_openai import ChatOpenAI
-
-from textwrap import dedent
+from model import *
 from agents import SatelliteAgents
 from tasks import SatelliteTasks
 from simulation import SimulationCrew
-from dotenv import load_dotenv
-load_dotenv()
 
 class SatelliteCrew:
     def __init__(self, disaster):
         self.disaster = disaster
         simulation_report = SimulationCrew(disaster)
         self.report = simulation_report.run()
-        self.OpenAIGPT35 = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1.0)
-        self.Ollama = Ollama(model="openhermes")
+        self.model = using_model
 
     def run(self):
         agents = SatelliteAgents()
@@ -44,7 +36,7 @@ class SatelliteCrew:
         crew = Crew(
             agents=[earth_observation_agent, weather_monitoring_agent, communication_agent, navigation_agent, conductor_agent, recoder_agent],
             tasks=[earth_observation_task, weather_monitoring_task, communication_task, navigation_task, operation_conducting_task, report_writing_task],
-            manager_llm=self.OpenAIGPT35,
+            manager_llm=self.model,
             process=Process.hierarchical,
             verbose=2,
         )
