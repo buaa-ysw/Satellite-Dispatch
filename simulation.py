@@ -1,35 +1,5 @@
 from crewai import Agent, Task, Crew, Process
-import os
-import configparser
-from dotenv import load_dotenv
-
-from langchain_community.llms import Ollama
-from langchain_openai import ChatOpenAI
-
-from langchain.agents import Tool
-from langchain_community.utilities import GoogleSerperAPIWrapper
-os.environ["SERPER_API_KEY"] = "f2262d553f5691749a5420e2a5d3a2b36c84aa62"
-search_tool = GoogleSerperAPIWrapper()
-
-# 读取配置文件
-config = configparser.ConfigParser()
-config.read('config.ini')
-
-# 设置默认模型
-model_name = config.get('models', 'using_model')
-
-if model_name == 'ollama_openhermes':
-    using_model = Ollama(model="openhermes")
-elif model_name == 'gpt-3.5-turbo':
-    using_model = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1.0)
-    load_dotenv()
-else:
-    raise ValueError("Unsupported default model name")
-
-# 设置默认模型到环境变量
-os.environ["USING_MODEL"] = model_name
-
-
+from model import *
 
 class SimulationCrew():
     def __init__(self, disaster):
@@ -72,7 +42,7 @@ class SimulationCrew():
             verbose=True,
             llm=using_model,
             allow_delegation=False,
-            tools=[Tool(name="Google Search", func=search_tool.run, description="Search-based queries")],
+            tools=google_search_tool,
             # tools=[search_tool]
         )
 
@@ -82,7 +52,12 @@ class SimulationCrew():
             backstory="""You are a writer who specializes in creating narratives about natural disasters. 
                         Your task is to continue to generate more reasonable times, places, and events in this disaster.
                         You will use the information provided by the Disaster Generator and the Disaster Information Analyst,
-                        or just create some new resonable information to create a detailed and engaging narrative.""",
+                        or just create some new resonable information to create detailed messages.
+                        The format of each message is like this:
+                        # Disaster: XXX
+                        [time1] [location1] Buildings collapse, people are trapped.
+                        [time2] [location2] Weather changes, weakening communication signals.
+                        [time3] [location3] Road destruction, people are in panic.""",
             verbose=True,
             llm=using_model,
             allow_delegation=False,
