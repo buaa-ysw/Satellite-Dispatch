@@ -11,14 +11,14 @@ class SatelliteTasks:
                 Disaster situation: {disaster}
                 Live reports from the scene as they come back from the front lines: {report}
                 Mission: 
-                extract remote sensing information from the reports on the scene,
-                determine the ground conditions in the affected area, 
+                extract information within your scope of work from the reports on the scene,
+                determine the GROUND CONDITIONS in the affected area, 
                 self-test and adjust the operating status, 
                 and report these in a timely manner to 'The Recoder Agent'.
                 {self.__tip_section()}
                 """),
             expected_output=dedent("""
-                Detailed report document on the ground conditions in the affected area, with specific post-disaster timetable
+                Detailed report document on the GROUND CONDITIONS in the affected area, with specific post-disaster timetable
                 \n[Below is an example]
                 -------------------------
                 Earth Observation Satellite
@@ -34,7 +34,7 @@ class SatelliteTasks:
                 During operation, communication is slightly interrupted.
                 -------------------------
                 """),
-            async_execution=True,
+            async_execution=False,
             agent=agent,
         )
 
@@ -44,14 +44,14 @@ class SatelliteTasks:
                 Disaster situation: {disaster}
                 Live reports from the scene as they come back from the front lines: {report}
                 Mission: 
-                extract remote sensing information from the reports on the scene,
-                determine the weather changes in the affected area,
+                extract information within your scope of work from the reports on the scene,
+                determine the WEATHER CHANGES in the affected area,
                 self-test and adjust the operating status, 
                 and report these in a timely manner to 'The Recoder Agent'.
                 {self.__tip_section()}
                 """),
             expected_output=dedent("""
-                Detailed report document on the weather changes in the affected area, with specific post-disaster timetable
+                Detailed report document on the WEATHER CHANGES in the affected area, with specific post-disaster timetable
                 \n[Below is an example]
                 -------------------------
                 Weather Monitoring Satellite
@@ -63,7 +63,7 @@ class SatelliteTasks:
                 Normal operation, continuous transmission of critical data.
                 -------------------------
                 """),
-            async_execution=True,
+            async_execution=False,
             agent=agent,
         )
         
@@ -73,14 +73,14 @@ class SatelliteTasks:
                 Disaster situation: {disaster}
                 Live reports from the scene as they come back from the front lines: {report}
                 Mission: 
-                extract remote sensing information from the reports on the scene,
-                determine the communication status in the affected area,
+                extract information within your scope of work from the reports on the scene,
+                determine the COMMUNICATION STATUS in the affected area,
                 self-test and adjust the operating status, 
                 and report these in a timely manner to 'The Recoder Agent'.
                 {self.__tip_section()}
                 """),
             expected_output=dedent("""
-                Detailed report document on the communication status in the affected area, with specific post-disaster timetable
+                Detailed report document on the COMMUNICATION STATUS in the affected area, with specific post-disaster timetable
                 \n[Below is an example]
                 -------------------------
                 Communication Satellite
@@ -96,7 +96,7 @@ class SatelliteTasks:
                 Maintaining functionality with intermittent disruptions due to high demand.
                 -------------------------
                 """),
-            async_execution=True,
+            async_execution=False,
             agent=agent,
         )
         
@@ -106,14 +106,14 @@ class SatelliteTasks:
                 Disaster situation: {disaster}
                 Live reports from the scene as they come back from the front lines: {report}
                 Mission: 
-                extract remote sensing information from the reports on the scene,
-                determine the navigation status in the affected area,
+                extract information within your scope of work from the reports on the scene,
+                determine the NAVIGATION STATUS in the affected area,
                 self-test and adjust the operating status, 
                 and report these in a timely manner to 'The Recoder Agent'.
                 {self.__tip_section()}
                 """),
             expected_output=dedent("""
-                Detailed report document on the navigation status in the affected area, with specific post-disaster timetable
+                Detailed report document on the NAVIGATION STATUS in the affected area, with specific post-disaster timetable
                 \n[Below is an example]
                 -------------------------
                 Navigation Satellite
@@ -129,7 +129,7 @@ class SatelliteTasks:
                 Normal operation, providing accurate positioning and navigation assistance to support emergency response efforts.
                 -------------------------
                 """),
-            async_execution=True,
+            async_execution=False,
             agent=agent,
         )
         
@@ -138,9 +138,9 @@ class SatelliteTasks:
             description=dedent(f"""
                 Disaster situation: {disaster}
                 Mission:
-                Collect reports from all Satellites, including 'The Earth Observation Satellite', 'The Weather Monitoring Satellite', 'The Communication Satellite' and 'The Navigation Satellite',
-                prepare a specific and detailed post-disaster emergency response report,focusing on the reports of the Satellites,
-                to enable government departmental staff to better review and improve their subsequent work on disaster relief.
+                Collect reports from all the 4 Satellites, including 'The Earth Observation Satellite', 'The Weather Monitoring Satellite', 'The Communication Satellite' and 'The Navigation Satellite',
+                prepare a specific and detailed post-disaster emergency response report, focusing on the reports of the Satellites,
+                finally write a summary to complete the post-disaster satellite emergency report.
                 {self.__tip_section()}
                 """),
             expected_output=dedent("""
@@ -149,7 +149,7 @@ class SatelliteTasks:
                 -------------------------
                 # Post-disaster satellite emergency reporting
                 ## Disaster Situation
-                The magnitude 8 earthquake struck Wenchuan, Sichuan, causing significant destruction and trapping individuals in the affected area.
+                [11: 15] The magnitude 8 earthquake struck Wenchuan, Sichuan, causing significant destruction and trapping individuals in the affected area.
                 ......
                 ## Satellite Reports
                 ### Earth Observation Satellite

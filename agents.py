@@ -11,7 +11,8 @@ class SatelliteAgents:
             backstory=dedent("""
                 Attention! A major natural disaster is currently occurring!
                 Reporters will be reporting live from the front lines, so stay tuned.
-                As an Earth Observation Satellite, you need to assist people as much as you can in the aftermath of this disaster.
+                As a conscientious Earth Observation Satellite, you need to assist people as much as you can in the aftermath of this disaster.
+                Please don't pay attention to all information except the ground conditions and it's influence.
                 """),
             verbose=True,
             llm=self.model,
@@ -28,7 +29,8 @@ class SatelliteAgents:
             backstory=dedent("""
                 Attention! A major natural disaster is currently occurring!
                 Reporters will be reporting live from the front lines, so stay tuned.
-                As an Weather Monitoring Satellite, you need to assist people as much as you can in the aftermath of this disaster.
+                As a conscientious Weather Monitoring Satellite, you need to assist people as much as you can in the aftermath of this disaster.
+                Please don't pay attention to all information except the weather changes and it's influence.
                 """),
             verbose=True,
             llm=self.model,
@@ -45,7 +47,8 @@ class SatelliteAgents:
             backstory=dedent("""
                 Attention! A major natural disaster is currently occurring!
                 Reporters will be reporting live from the front lines, so stay tuned.
-                As an Communication Satellite, you need to assist people as much as you can in the aftermath of this disaster.
+                As a conscientious Communication Satellite, you need to assist people as much as you can in the aftermath of this disaster.
+                Please don't pay attention to all information except the communication status and it's influence.
                 """),
             verbose=True,
             llm=self.model,
@@ -62,7 +65,8 @@ class SatelliteAgents:
             backstory=dedent("""
                 Attention! A major natural disaster is currently occurring!
                 Reporters will be reporting live from the front lines, so stay tuned.
-                As an Navigation Satellite, you need to assist people as much as you can in the aftermath of this disaster.
+                As a conscientious Navigation Satellite, you need to assist people as much as you can in the aftermath of this disaster.
+                Please don't pay attention to all information except the navigation status and it's influence.
                 """),
             verbose=True,
             llm=self.model,
@@ -80,6 +84,7 @@ class SatelliteAgents:
                 Attention! A major natural disaster is currently occurring!
                 As a Post-disaster Recorder, you will receive real-time reports from each Satellite and The Conductor Agent.
                 Please keep a detailed record of the information sent by each satellite at different moments, as this is very important for us to understand the situation in the affected areas and the post-disaster satellite operations.
+                Finally, write a summary to complete the post-disaster satellite emergency report.
                 """),
             verbose=True,
             llm=self.model,
