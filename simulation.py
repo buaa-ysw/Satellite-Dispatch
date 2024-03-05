@@ -70,7 +70,7 @@ class SimulationCrew():
             allow_delegation=False,
         )
         
-    def __create_tasks(self, disaster):
+    def __create_tasks(self):
         self.task1 = Task(
             description="""Generate a series of reasonable events about a disaster.
                         They can be different, but the events should be reasonable, other natural disasters are also acceptable.
