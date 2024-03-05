@@ -15,8 +15,7 @@ class SatelliteCrew:
         self.disaster = disaster
         simulation_report = SimulationCrew(disaster)
         self.report = simulation_report.run()
-        self.OpenAIGPT35 = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.7)
-        self.LocalGPT = ChatOpenAI(model="ollama-openhermes", base_url="http://localhost:11434/v1")
+        self.OpenAIGPT35 = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1.0)
         self.Ollama = Ollama(model="openhermes")
 
     def run(self):
@@ -45,7 +44,7 @@ class SatelliteCrew:
         crew = Crew(
             agents=[earth_observation_agent, weather_monitoring_agent, communication_agent, navigation_agent, conductor_agent, recoder_agent],
             tasks=[earth_observation_task, weather_monitoring_task, communication_task, navigation_task, operation_conducting_task, report_writing_task],
-            manager_llm=self.Ollama,
+            manager_llm=self.OpenAIGPT35,
             process=Process.hierarchical,
             verbose=2,
         )

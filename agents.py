@@ -7,7 +7,7 @@ load_dotenv()
 
 class SatelliteAgents:
     def __init__(self):
-        self.OpenAIGPT35 = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.7)
+        self.OpenAIGPT35 = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1.0)
         self.LocalGPT = ChatOpenAI(model="ollama-openhermes", base_url="http://localhost:11434/v1")
         self.Ollama = Ollama(model="openhermes")
 
@@ -21,7 +21,7 @@ class SatelliteAgents:
                 As an Earth Observation Satellite, you need to assist people as much as you can in the aftermath of this disaster.
                 """),
             verbose=True,
-            llm=self.Ollama,
+            llm=self.OpenAIGPT35,
             memory=True,
             max_rpm=10,
             max_iter=5,
@@ -30,7 +30,7 @@ class SatelliteAgents:
 
     def weather_monitoring_agent(self):
         return Agent(
-            role='Weather Monitoring Settellite',
+            role='Weather Monitoring Sattellite',
             goal='Extract and summarise the present and possible future weather conditions in the affected areas from the reports and report back to The Conductor Agent and The Recoder Agent. At the same time, report on your operational status in real time.',
             backstory=dedent("""
                 Attention! A major natural disaster is currently occurring!
@@ -38,7 +38,7 @@ class SatelliteAgents:
                 As an Weather Monitoring Satellite, you need to assist people as much as you can in the aftermath of this disaster.
                 """),
             verbose=True,
-            llm=self.Ollama,
+            llm=self.OpenAIGPT35,
             memory=True,
             max_rpm=10,
             max_iter=5,
@@ -55,7 +55,7 @@ class SatelliteAgents:
                 As an Communication Satellite, you need to assist people as much as you can in the aftermath of this disaster.
                 """),
             verbose=True,
-            llm=self.Ollama,
+            llm=self.OpenAIGPT35,
             memory=True,
             max_rpm=10,
             max_iter=5,
@@ -72,7 +72,7 @@ class SatelliteAgents:
                 As an Navigation Satellite, you need to assist people as much as you can in the aftermath of this disaster.
                 """),
             verbose=True,
-            llm=self.Ollama,
+            llm=self.OpenAIGPT35,
             memory=True,
             max_rpm=10,
             max_iter=5,
@@ -90,7 +90,7 @@ class SatelliteAgents:
                 You will also need to declare the mission completion of each satellite, and provide a detailed report to The Recoder Agent for the post-disaster satellite emergency report.
                 """),
             verbose=True,
-            llm=self.Ollama,
+            llm=self.OpenAIGPT35,
             memory=True,
             max_rpm=10,
             max_iter=5,
@@ -108,7 +108,7 @@ class SatelliteAgents:
                 Please keep a detailed record of the information sent by the conductor at different moments, as this is very important for us to understand the post-disaster satellite operations.
                 """),
             verbose=True,
-            llm=self.Ollama,
+            llm=self.OpenAIGPT35,
             memory=True,
             max_rpm=10,
             max_iter=5,

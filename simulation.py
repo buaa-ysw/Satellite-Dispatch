@@ -9,9 +9,10 @@ os.environ["SERPER_API_KEY"] = "f2262d553f5691749a5420e2a5d3a2b36c84aa62"
 search_tool = GoogleSerperAPIWrapper()
 
 from langchain_community.llms import Ollama
-
 ollama_openhermes = Ollama(model="openhermes")
-# ollama_solar = Ollama(model="Solar")
+
+from langchain_openai import ChatOpenAI
+openai_gpt35 = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1.0)
 
 class SimulationCrew():
     def __init__(self, disaster):
@@ -41,7 +42,7 @@ class SimulationCrew():
                         [09:45] [41.15°N, 116°E] Road destruction, people are in panic.
                         this is just a format, the time and location are just an example.""",
             verbose=True,
-            llm=ollama_openhermes, # Ollama model passed here
+            llm=openai_gpt35, # Ollama model passed here
             allow_delegation=False,
         )
 
@@ -52,7 +53,7 @@ class SimulationCrew():
                         Your expertise lies in sorting out and documenting what happens at every moment and place during natural disasters.
                         You have a rich accumulation of events, understand what happens in various natural disasters, and have a knack for summarizing events.""",
             verbose=True,
-            llm=ollama_openhermes,
+            llm=openai_gpt35,
             allow_delegation=False,
             tools=[Tool(name="Google Search", func=search_tool.run, description="Search-based queries")],
             # tools=[search_tool]
@@ -66,7 +67,7 @@ class SimulationCrew():
                         You will use the information provided by the Disaster Generator and the Disaster Information Analyst,
                         or just create some new resonable information to create a detailed and engaging narrative.""",
             verbose=True,
-            llm=ollama_openhermes,
+            llm=openai_gpt35,
             allow_delegation=False,
         )
         

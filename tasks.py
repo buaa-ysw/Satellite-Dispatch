@@ -11,7 +11,7 @@ class SatelliteTasks:
                 Disaster situation: {disaster}
                 Live reports from the scene as they come back from reporters: {report}
                 Mission: 
-                extract remote sensing information from 'The Reporter Agent' returned by reporters on the scene,
+                extract remote sensing information from the reports returned by reporters on the scene,
                 determine the damage to facilities and the escape of people in the affected area, 
                 self-test and adjust the operating status, 
                 and report this in a timely manner to 'The Conductor Agent' and 'The Recoder Agent'.
@@ -29,7 +29,7 @@ class SatelliteTasks:
                 Disaster situation: {disaster}
                 Live reports from the scene as they come back from reporters: {report}
                 Mission: 
-                extract remote sensing information from 'The Reporter Agent' returned by reporters on the scene,
+                extract remote sensing information from the reports returned by reporters on the scene,
                 determine the present and possible future weather conditions in the affected area,
                 self-test and adjust the operating status, 
                 and report this in a timely manner to 'The Conductor Agent' and 'The Recoder Agent'.
@@ -47,7 +47,7 @@ class SatelliteTasks:
                 Disaster situation: {disaster}
                 Live reports from the scene as they come back from reporters: {report}
                 Mission: 
-                extract remote sensing information from 'The Reporter Agent' returned by reporters on the scene,
+                extract remote sensing information from the reports returned by reporters on the scene,
                 determine the rescue communications status and mass communications signals in the affected area,
                 self-test and adjust the operating status, 
                 and report this in a timely manner to 'The Conductor Agent' and 'The Recoder Agent'.
@@ -65,7 +65,7 @@ class SatelliteTasks:
                 Disaster situation: {disaster}
                 Live reports from the scene as they come back from reporters: {report}
                 Mission: 
-                extract remote sensing information from 'The Reporter Agent' returned by reporters on the scene,
+                extract remote sensing information from the reports returned by reporters on the scene,
                 determine the present and possible future weather conditions in the affected area,
                 self-test and adjust the operating status, 
                 and report this in a timely manner to 'The Conductor Agent' and 'The Recoder Agent'.
