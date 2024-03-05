@@ -6,17 +6,20 @@ from langchain_openai import ChatOpenAI
 from textwrap import dedent
 from agents import SatelliteAgents
 from tasks import SatelliteTasks
+from simulation import SimulationCrew
 from dotenv import load_dotenv
 load_dotenv()
 
 class SatelliteCrew:
     def __init__(self, disaster):
         self.disaster = disaster
+        simulation_report = SimulationCrew(disaster)
+        self.report = simulation_report.run()
         self.OpenAIGPT35 = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.7)
         self.LocalGPT = ChatOpenAI(model="ollama-openhermes", base_url="http://localhost:11434/v1")
         self.Ollama = Ollama(model="openhermes")
 
-    def run(self, report):
+    def run(self):
         agents = SatelliteAgents()
         tasks = SatelliteTasks()
 
@@ -29,11 +32,11 @@ class SatelliteCrew:
         recoder_agent = agents.recoder_agent()
 
         # Define tasks
-        earth_observation_task = tasks.earth_observation_task(earth_observation_agent, self.disaster, report)
-        weather_monitoring_task = tasks.weather_monitoring_task(weather_monitoring_agent, self.disaster, report)
-        communication_task = tasks.communication_task(communication_agent, self.disaster, report)
-        navigation_task = tasks.navigation_task(navigation_agent, self.disaster, report)
-        operation_conducting_task = tasks.operation_conducting_task(conductor_agent, self.disaster, report)
+        earth_observation_task = tasks.earth_observation_task(earth_observation_agent, self.disaster, self.report)
+        weather_monitoring_task = tasks.weather_monitoring_task(weather_monitoring_agent, self.disaster, self.report)
+        communication_task = tasks.communication_task(communication_agent, self.disaster, self.report)
+        navigation_task = tasks.navigation_task(navigation_agent, self.disaster, self.report)
+        operation_conducting_task = tasks.operation_conducting_task(conductor_agent, self.disaster, self.report)
         
         context = [earth_observation_task, weather_monitoring_task, communication_task, navigation_task, operation_conducting_task]
         report_writing_task = tasks.report_writing_task(recoder_agent, self.disaster, context)

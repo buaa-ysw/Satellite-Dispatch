@@ -1,11 +1,9 @@
 from crewai import Agent, Task, Crew, Process
 import os
 
-# from langchain_community.tools import DuckDuckGoSearchRun
-# search_tool = DuckDuckGoSearchRun()
-
 from langchain.agents import Tool
 from langchain.utilities import GoogleSerperAPIWrapper
+
 # Set API key
 os.environ["SERPER_API_KEY"] = "f2262d553f5691749a5420e2a5d3a2b36c84aa62"
 search_tool = GoogleSerperAPIWrapper()
@@ -15,8 +13,9 @@ from langchain_community.llms import Ollama
 ollama_openhermes = Ollama(model="openhermes")
 # ollama_solar = Ollama(model="Solar")
 
-class SimulationCrew:
-    def __init__(self):
+class SimulationCrew():
+    def __init__(self, disaster):
+        self.disaster = disaster
         self.__create_agents()
         self.__create_tasks()
         
@@ -71,7 +70,7 @@ class SimulationCrew:
             allow_delegation=False,
         )
         
-    def __create_tasks(self):
+    def __create_tasks(self, disaster):
         self.task1 = Task(
             description="""Generate a series of reasonable events about a disaster.
                         They can be different, but the events should be reasonable, other natural disasters are also acceptable.
@@ -150,5 +149,7 @@ class SimulationCrew:
 
 if __name__ == "__main__":
     print("######################")
-    simulation = SimulationCrew()
+    print("## Starting Simulation")
+    print("######################")
+    simulation = SimulationCrew(disaster="earthquake")
     simulation.run()
