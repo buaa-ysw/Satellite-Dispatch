@@ -23,12 +23,12 @@ class SatelliteTasks:
                 -------------------------
                 Earth Observation Satellite
                 - **Damage to Facilities:**
-                [11: 25 (10minutes after)] Buildings collapse, roads destroyed, infrastructure severely damaged.
-                [12: 12 (57minutes after)] Supplies airdropped to isolated areas, temporary bridges constructed for access.
+                *[11: 25 (10minutes after)]* Buildings collapse, roads destroyed, infrastructure severely damaged.
+                *[12: 12 (57minutes after)]* Supplies airdropped to isolated areas, temporary bridges constructed for access.
                 ......
                 - **Escape of People:**
-                [11: 19 (4minutes after)] Survivors fleeing on foot, seeking shelter in open spaces.
-                [12: 26 (1hour 11minutes after)] Volunteer groups and rescue teams accessing remote mountainous areas.
+                *[11: 19 (4minutes after)]* Survivors fleeing on foot, seeking shelter in open spaces.
+                *[12: 26 (1hour 11minutes after)]* Volunteer groups and rescue teams accessing remote mountainous areas.
                 ......
                 - **Operational status:**
                 During operation, communication is slightly interrupted.
@@ -56,8 +56,8 @@ class SatelliteTasks:
                 -------------------------
                 Weather Monitoring Satellite
                 - **Weather changes**
-                [11: 30(15minutes after)] Light rain, heavy fog, and low visibility affect the evacuation of people and rescue in disaster areas.
-                [12: 02(47minutes after)] The rain has stopped, the fog has disappeared, and the temperature and humidity are good, which is conducive to rescue.
+                *[11: 30(15minutes after)]* Light rain, heavy fog, and low visibility affect the evacuation of people and rescue in disaster areas.
+                *[12: 02(47minutes after)]* The rain has stopped, the fog has disappeared, and the temperature and humidity are good, which is conducive to rescue.
                 ......
                 - **Operational status:**
                 Normal operation, continuous transmission of critical data.
@@ -85,12 +85,12 @@ class SatelliteTasks:
                 -------------------------
                 Communication Satellite
                 - **Communication Coverage:**
-                [11:35 (20 minutes after)] Communication channels overloaded, intermittent disruptions reported.
-                [12:10 (55 minutes after)] Additional bandwidth allocated to prioritize emergency communication, restoring connectivity in affected areas.
+                *[11:35 (20 minutes after)]* Communication channels overloaded, intermittent disruptions reported.
+                *[12:10 (55 minutes after)]* Additional bandwidth allocated to prioritize emergency communication, restoring connectivity in affected areas.
                 ......
                 - **Emergency Communication Services:**
-                [11:40 (25 minutes after)] Emergency hotlines established for affected populations to request assistance.
-                [12:15 (1 hour after)] Satellite terminals deployed for remote communities without access to terrestrial communication.
+                *[11:40 (25 minutes after)]* Emergency hotlines established for affected populations to request assistance.
+                *[12:15 (1 hour after)]* Satellite terminals deployed for remote communities without access to terrestrial communication.
                 ......
                 - **Operational status:**
                 Maintaining functionality with intermittent disruptions due to high demand.
@@ -118,12 +118,12 @@ class SatelliteTasks:
                 -------------------------
                 Navigation Satellite
                 - **Search and Rescue Operations:**
-                [11:45 (30 minutes after)] Precise positioning data provided to guide search and rescue teams to affected areas.
-                [12:20 (1 hour 5 minutes after)] Evacuation routes mapped out to ensure safe passage for displaced populations.
+                *[11:45 (30 minutes after)]* Precise positioning data provided to guide search and rescue teams to affected areas.
+                *[12:20 (1 hour 5 minutes after)]* Evacuation routes mapped out to ensure safe passage for displaced populations.
                 ......
                 - **Coordination of Emergency Response:**
-                [11:50 (35 minutes after)] Emergency response teams equipped with GPS devices to navigate through debris and rubble.
-                [12:25 (1 hour 10 minutes after)] Coordination of helicopter rescue missions using satellite-based navigation systems.
+                *[11:50 (35 minutes after)]* Emergency response teams equipped with GPS devices to navigate through debris and rubble.
+                *[12:25 (1 hour 10 minutes after)]* Coordination of helicopter rescue missions using satellite-based navigation systems.
                 ......
                 - **Operational status:**
                 Normal operation, providing accurate positioning and navigation assistance to support emergency response efforts.
@@ -147,48 +147,48 @@ class SatelliteTasks:
                 A comprehensive post-disaster emergency response report, in standard markdown format
                 \n[Below is an example]
                 -------------------------
-                # Post-disaster satellite emergency reporting
+                # Wenchuan earthquake satellite emergency reporting
                 ## Disaster Situation
-                [11: 15] The magnitude 8 earthquake struck Wenchuan, Sichuan, causing significant destruction and trapping individuals in the affected area.
+                *[11: 15]* The magnitude 8 earthquake struck Wenchuan, Sichuan, causing significant destruction and trapping individuals in the affected area.
                 ......
                 ## Satellite Reports
                 ### Earth Observation Satellite
                 - **Damage to Facilities:**
-                [11: 25 (10minutes after)] Buildings collapse, roads destroyed, infrastructure severely damaged.
-                [12: 12 (57minutes after)] Supplies airdropped to isolated areas, temporary bridges constructed for access.
+                *[11: 25 (10minutes after)]* Buildings collapse, roads destroyed, infrastructure severely damaged.
+                *[12: 12 (57minutes after)]* Supplies airdropped to isolated areas, temporary bridges constructed for access.
                 ......
                 - **Escape of People:**
-                [11: 19 (4minutes after)] Survivors fleeing on foot, seeking shelter in open spaces.
-                [12: 26 (1hour 11minutes after)] Volunteer groups and rescue teams accessing remote mountainous areas.
+                *[11: 19 (4minutes after)]* Survivors fleeing on foot, seeking shelter in open spaces.
+                *[12: 26 (1hour 11minutes after)]* Volunteer groups and rescue teams accessing remote mountainous areas.
                 ......
                 - **Operational status:**
                 During operation, communication is slightly interrupted.
                 ### Weather Monitoring Satellite
                 - **Weather changes**
-                [11: 30(15minutes after)] Light rain, heavy fog, and low visibility affect the evacuation of people and rescue in disaster areas.
-                [12: 02(47minutes after)] The rain has stopped, the fog has disappeared, and the temperature and humidity are good, which is conducive to rescue.
+                *[11: 30(15minutes after)]* Light rain, heavy fog, and low visibility affect the evacuation of people and rescue in disaster areas.
+                *[12: 02(47minutes after)]* The rain has stopped, the fog has disappeared, and the temperature and humidity are good, which is conducive to rescue.
                 ......
                 - **Operational status:**
                 Normal operation, continuous transmission of critical data.
                 ### Communication Satellite
                 - **Communication Coverage:**
-                [11:35 (20 minutes after)] Communication channels overloaded, intermittent disruptions reported.
-                [12:10 (55 minutes after)] Additional bandwidth allocated to prioritize emergency communication, restoring connectivity in affected areas.
+                *[11:35 (20 minutes after)]* Communication channels overloaded, intermittent disruptions reported.
+                *[12:10 (55 minutes after)]* Additional bandwidth allocated to prioritize emergency communication, restoring connectivity in affected areas.
                 ......
                 - **Emergency Communication Services:**
-                [11:40 (25 minutes after)] Emergency hotlines established for affected populations to request assistance.
-                [12:15 (1 hour after)] Satellite terminals deployed for remote communities without access to terrestrial communication.
+                *[11:40 (25 minutes after)]* Emergency hotlines established for affected populations to request assistance.
+                *[12:15 (1 hour after)]* Satellite terminals deployed for remote communities without access to terrestrial communication.
                 ......
                 - **Operational status:**
                 Maintaining functionality with intermittent disruptions due to high demand.
                 ### Navigation Satellite
                 - **Search and Rescue Operations:**
-                [11:45 (30 minutes after)] Precise positioning data provided to guide search and rescue teams to affected areas.
-                [12:20 (1 hour 5 minutes after)] Evacuation routes mapped out to ensure safe passage for displaced populations.
+                *[11:45 (30 minutes after)]* Precise positioning data provided to guide search and rescue teams to affected areas.
+                *[12:20 (1 hour 5 minutes after)]* Evacuation routes mapped out to ensure safe passage for displaced populations.
                 ......
                 - **Coordination of Emergency Response:**
-                [11:50 (35 minutes after)] Emergency response teams equipped with GPS devices to navigate through debris and rubble.
-                [12:25 (1 hour 10 minutes after)] Coordination of helicopter rescue missions using satellite-based navigation systems.
+                *[11:50 (35 minutes after)]* Emergency response teams equipped with GPS devices to navigate through debris and rubble.
+                *[12:25 (1 hour 10 minutes after)]* Coordination of helicopter rescue missions using satellite-based navigation systems.
                 ......
                 - **Operational status:**
                 Normal operation, providing accurate positioning and navigation assistance to support emergency response efforts.
