@@ -18,7 +18,9 @@ class SatelliteTasks:
                 {self.__tip_section()}
                 """),
             expected_output=dedent("""
-                Detailed report document on the damage to facilities and the escape of people in the affected area, with specific post-disaster timetable"""),
+                Detailed report document on the damage to facilities and the escape of people in the affected area, with specific post-disaster timetable
+                It is prohibited to include content that is not relevant to the task!
+                """),
             async_execution=True,
             agent=agent,
         )
@@ -36,7 +38,9 @@ class SatelliteTasks:
                 {self.__tip_section()}
                 """),
             expected_output=dedent("""
-                Detailed report document on the present and possible future weather conditions in the affected area, with specific post-disaster timetable"""),
+                Detailed report document on the present and possible future weather conditions in the affected area, with specific post-disaster timetable
+                It is prohibited to include content that is not relevant to the task!
+                """),
             async_execution=True,
             agent=agent,
         )
@@ -54,7 +58,9 @@ class SatelliteTasks:
                 {self.__tip_section()}
                 """),
             expected_output=dedent("""
-                Detailed report document on the rescue communications status and mass communications signals in the affected area, with specific post-disaster timetable"""),
+                Detailed report document on the rescue communications status and mass communications signals in the affected area, with specific post-disaster timetable
+                It is prohibited to include content that is not relevant to the task!
+                """),
             async_execution=True,
             agent=agent,
         )
@@ -72,7 +78,9 @@ class SatelliteTasks:
                 {self.__tip_section()}
                 """),
             expected_output=dedent("""
-                Detailed report document on the positioning and timing information (e.g. GPS and BDS) in the affected area, with specific post-disaster timetable"""),
+                Detailed report document on the navigation signal information (e.g. GPS and BDS) in the affected area, with specific post-disaster timetable
+                It is prohibited to include content that is not relevant to the task!
+                """),
             async_execution=True,
             agent=agent,
         )
@@ -88,6 +96,8 @@ class SatelliteTasks:
                 and provide a detailed report to 'the Recoder Agent' for the post-disaster satellite emergency report.
                 {self.__tip_section()}
                 """),
+            expected_output=dedent("""
+                Recommendations for changes to each satellite and a detailed report on the satellite's operational status"""),
             async_execution=True,
             agent=agent,
         )
