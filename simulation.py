@@ -119,7 +119,7 @@ class SimulationCrew():
                         [time2] [°N, °E] Buildings collapse, people are trapped.
                         [time3] [°N, °E] Weather changes, weakening communication signals.
                         """,
-            expected_output="""Output at least 20 events, 
+            expected_output="""Output at least 20 different time, locations and events, 
                         must be reasonable, and must include the information about people being trapped, weather changes, weakening communication signals, road destruction, and more.
                         the format is like this:
                         # Disaster: XXX
