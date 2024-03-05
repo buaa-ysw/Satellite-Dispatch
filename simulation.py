@@ -1,21 +1,35 @@
 from crewai import Agent, Task, Crew, Process
 import os
+import configparser
+from dotenv import load_dotenv
+
+from langchain_community.llms import Ollama
+from langchain_openai import ChatOpenAI
 
 from langchain.agents import Tool
 from langchain_community.utilities import GoogleSerperAPIWrapper
-
-from dotenv import load_dotenv
-load_dotenv()
-
-# Set API key
 os.environ["SERPER_API_KEY"] = "f2262d553f5691749a5420e2a5d3a2b36c84aa62"
 search_tool = GoogleSerperAPIWrapper()
 
-from langchain_community.llms import Ollama
-ollama_openhermes = Ollama(model="openhermes")
+# 读取配置文件
+config = configparser.ConfigParser()
+config.read('config.ini')
 
-from langchain_openai import ChatOpenAI
-openai_gpt35 = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1.0)
+# 设置默认模型
+model_name = config.get('models', 'using_model')
+
+if model_name == 'ollama_openhermes':
+    using_model = Ollama(model="openhermes")
+elif model_name == 'gpt-3.5-turbo':
+    using_model = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1.0)
+    load_dotenv()
+else:
+    raise ValueError("Unsupported default model name")
+
+# 设置默认模型到环境变量
+os.environ["USING_MODEL"] = model_name
+
+
 
 class SimulationCrew():
     def __init__(self, disaster):
@@ -45,7 +59,7 @@ class SimulationCrew():
                         [09:45] [39.15°N, 116°E] Road destruction, people are in panic.
                         this is just a format, the time and location are just an example.""",
             verbose=True,
-            llm=openai_gpt35, # Ollama model passed here
+            llm=using_model, # Ollama model passed here
             allow_delegation=False,
         )
 
@@ -56,7 +70,7 @@ class SimulationCrew():
                         Your expertise lies in sorting out and documenting what happens at every moment and place during natural disasters.
                         You have a rich accumulation of events, understand what happens in various natural disasters, and have a knack for summarizing events.""",
             verbose=True,
-            llm=openai_gpt35,
+            llm=using_model,
             allow_delegation=False,
             tools=[Tool(name="Google Search", func=search_tool.run, description="Search-based queries")],
             # tools=[search_tool]
@@ -70,7 +84,7 @@ class SimulationCrew():
                         You will use the information provided by the Disaster Generator and the Disaster Information Analyst,
                         or just create some new resonable information to create a detailed and engaging narrative.""",
             verbose=True,
-            llm=openai_gpt35,
+            llm=using_model,
             allow_delegation=False,
         )
         
