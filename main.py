@@ -1,14 +1,19 @@
 from init import *
 from model import *
+from function import save_report_with_name
 from agents import SatelliteAgents
 from tasks import SatelliteTasks
 from simulation import SimulationCrew
+import os
 
 class SatelliteCrew:
     def __init__(self, disaster):
         self.disaster = disaster
         simulation_report = SimulationCrew(disaster)
-        self.report = simulation_report.run()
+        self.disaster_name, self.report = simulation_report.run()
+        # Create directory for report output
+        self.report_path = report_output_path + "/" + self.disaster_name
+        os.makedirs(self.report_path, exist_ok=True)
         self.model = using_model
 
     def run(self):
@@ -45,8 +50,10 @@ class SatelliteCrew:
         )
 
         result = crew.kickoff()
+        # save_context_with_name(context, self.report_path, self.disaster_name)
+        context_str = str(context)
+        save_report_with_name(result, context_str, self.report_path, self.disaster_name)
         print(crew.usage_metrics)
-        
         return result
 
 

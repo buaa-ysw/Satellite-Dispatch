@@ -1,6 +1,6 @@
 import os
 
-def save_simulation_result(simulation_result, folder_path):
+def save_simulation_result_ori(simulation_result, folder_path):
     file_name = "Simulation_1.txt"
     file_path = os.path.join(folder_path, file_name)
     
@@ -24,7 +24,10 @@ def save_simulation_result_with_name(simulation_result, folder_path):
     first_line = simulation_result.split('\n')[0]
 
     # Extract the content after "# Disaster:"
-    disaster_name = first_line.split('# Disaster: ')[1]
+    try:
+        disaster_name = first_line.split('# Disaster: ')[1]
+    except IndexError:
+        disaster_name = "Simulation_ErrorName"
 
     # Create the file name
     file_name = f"{disaster_name}.txt"
@@ -43,3 +46,18 @@ def save_simulation_result_with_name(simulation_result, folder_path):
     file_path = os.path.join(folder_path, file_name)
     with open(file_path, "w") as file:
         file.write(simulation_result)
+    
+    return disaster_name
+
+def save_report_with_name(report, context, folder_path, disaster_name):
+    # Save the report as .md file
+    report_file_name = f"{disaster_name}_report.md"
+    report_file_path = os.path.join(folder_path, report_file_name)
+    with open(report_file_path, "w") as report_file:
+        report_file.write(report)
+
+    # Save the context as .md file
+    context_file_name = f"{disaster_name}_context.md"
+    context_file_path = os.path.join(folder_path, context_file_name)
+    with open(context_file_path, "w") as context_file:
+        context_file.write(context)

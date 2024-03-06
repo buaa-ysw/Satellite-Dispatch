@@ -1,6 +1,6 @@
 from init import *
 from model import *
-from function import save_simulation_result
+from function import save_simulation_result_with_name
 
 class SimulationCrew():
     def __init__(self, disaster):
@@ -99,7 +99,7 @@ class SimulationCrew():
                 - Generate a series of reasonable events (at least 20) until the disaster stops or subsides.
 
                 Format Example:
-                # Disaster: XXX
+                # Disaster: XXX (Summarized Title, including the disaster name, location or other.)
                 [August 6, 2023, 09:03] [24.8801°N, 114.0579°E] XXX hits the city.
                 [time2] [°N, °E] Buildings collapse, people are trapped.
                 [time3] [°N, °E] Weather changes, weakening communication signals.
@@ -110,7 +110,7 @@ class SimulationCrew():
                 Include details such as people being trapped, weather changes, weakening communication signals, road destruction, etc.
 
                 Format Example:
-                # Disaster: XXX
+                # Disaster: XXX (Summarized Title)
                 [August 6, 2023, 09:03] [24.8801°N, 114.0579°E] XXX hits the city.
                 [time2] [°N, °E] Buildings collapse, people are trapped.
                 [time3] [°N, °E] Weather changes, weakening communication signals.
@@ -136,8 +136,8 @@ class SimulationCrew():
             verbose=2, # You can set it to 1 or 2 to different logging levels
         )
         simulation_result = crew.kickoff()
-        save_simulation_result(simulation_result, simulation_output_path)
-        return simulation_result
+        disaster_name = save_simulation_result_with_name(simulation_result, simulation_output_path)
+        return disaster_name, simulation_result
 
 if __name__ == "__main__":
     print("######################")
