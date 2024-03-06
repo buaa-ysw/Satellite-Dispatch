@@ -20,7 +20,7 @@ git clone https://github.com/buaa-ysw/Satellite-Dispatch.git
 pip install -r requirements.txt
 ```
 
-3. Select the model in config.ini and modify the .env.example file.
+3. Select the model in `config.ini` and modify the `.env.example` file.
 
 4. Run the application:
 
