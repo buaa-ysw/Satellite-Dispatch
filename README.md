@@ -1,4 +1,4 @@
-# Satellite-Dispatch
+# 🛰️Satellite-Dispatch
 
 The Satellite-Dispatch is an CrewAI-driven platform designed to facilitate disaster response and recovery efforts using satellite technology. This project aims to harness the capabilities of various types of satellites, including Earth observation, weather monitoring, communication, and navigation satellites, to support emergency responders and authorities in mitigating the impact of natural disasters.
 
