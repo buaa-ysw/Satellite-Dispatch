@@ -32,7 +32,7 @@ class SatelliteCrew:
         context = [earth_observation_task, weather_monitoring_task, communication_task, navigation_task]
         report_writing_task = tasks.report_writing_task(recorder_agent, self.disaster, context)
         
-        report_collating_task = tasks.report_collating_agent(collator_agent, self.disaster, self.report, report_writing_task)
+        report_collating_task = tasks.report_collating_task(collator_agent, self.disaster, self.report, report_writing_task)
         
         # Define crew
         crew = Crew(

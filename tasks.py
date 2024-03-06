@@ -219,7 +219,7 @@ class SatelliteTasks:
             context=context,
         )
         
-    def report_collating_agent(self, agent, disaster, report, context):
+    def report_collating_task(self, agent, disaster, report, context):
         return Task(
             description=dedent(f"""
                 Disaster situation: {disaster}
