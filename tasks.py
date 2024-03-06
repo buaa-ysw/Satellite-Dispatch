@@ -250,32 +250,39 @@ class SatelliteTasks:
                     **Communication Satellite**
                 "Minor disturbances occur."
                 -------------------------------------- *[over]* --------------------------------------
+                
                 ------------------------- *[11: 19 (4 minutes after)]* -------------------------
                     **Earth Observation Satellite**
                 "Survivors fleeing on foot, seeking shelter in open spaces."
                 -------------------------------------- *[over]* --------------------------------------
+                
                 ------------------------- *[11: 25 (10 minutes after)]* ------------------------
                 *Aftershocks occurred on the ground, accompanied by strong earthquakes*
                     **Earth Observation Satellite**
                 "Buildings collapse, roads destroyed, infrastructure severely damaged."
                 -------------------------------------- *[over]* --------------------------------------
+                
                 ------------------------- *[11: 30 (15 minutes after)]* ------------------------
                     **Weather Monitoring Satellite**
                 "Light rain, heavy fog, and low visibility affect the evacuation of people and rescue in disaster areas."
                 -------------------------------------- *[over]* --------------------------------------
+                
                 ------------------------- *[11: 35 (20 minutes after)]* ------------------------
                     **Communication Satellite**
                 "Communication channels overloaded, intermittent disruptions reported."
                 ! Signal interruption due to ground base station damage !
                 -------------------------------------- *[over]* --------------------------------------
+                
                 ------------------------- *[11: 37 (22 minutes after)]* ------------------------
                 *Aftershocks occur again*
                 -------------------------------------- *[over]* --------------------------------------
+                
                 ------------------------- *[11: 40 (25 minutes after)]* ------------------------
                     **Communication Satellite**
                 "Emergency hotlines established for affected populations to request assistance."
                 ! Signal returns to normal !
                 -------------------------------------- *[over]* --------------------------------------
+                
                 ------------------------- *[11: 45 (30 minutes after)]* ------------------------
                     **Navigation Satellite**
                 "Precise positioning data provided to guide search and rescue teams to affected areas."
