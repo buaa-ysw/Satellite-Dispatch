@@ -64,6 +64,24 @@ class SimulationCrew():
         
     def __create_tasks(self):
         self.task1 = Task(
+            description="""{}, Find this kind of natural disasters and analyze documentarys about this.
+                Search for a specific disaster event and the occurrence of it, 
+                (as many as possible, at least 20 events) give time[xx:xx], locations[], and the events[] that happened.
+                including but not limited to people being trapped, weather changes, weakening communication signals, road destruction, and more. 
+                Search for a specific disaster event and the occurrence of it,
+                give time, location, and the event that happened.
+                """.format(self.disaster),
+            expected_output="""{}, Find this kind of natural disasters and analyze documentarys about this.
+                Search for just one specific disaster event and the occurrence of it, (as many as possible, at least 20 events) give time, location, and the event that happened.
+                including but not limited to people being trapped, weather changes, weakening communication signals, road destruction, and more. 
+                The format is like this:
+                # Disaster: xxx
+                [xx:xx] [xx°N, xx°E] XXX hits the city.
+                [xx:xx] [xx°N, xx°E] Buildings collapse, people are trapped....""".format(self.disaster),
+            agent=self.researcher
+        )
+        
+        self.task2 = Task(
             description="""Generate a series of reasonable events about a disaster.
                         They can be different, but the events should be reasonable, other natural disasters are also acceptable.
                         Using the information from the researcher, generate a series of reasonable events.
@@ -92,21 +110,6 @@ class SimulationCrew():
             agent=self.generator
         )
 
-        self.task2 = Task(
-            description="""{}, Find this kind of natural disasters and analyze documentarys about this.
-                Search for a specific disaster event and the occurrence of it,
-                give time, location, and the event that happened.
-                """.format(self.disaster),
-            expected_output="""{}, Find this kind of natural disasters and analyze documentarys about this.
-                Search for a specific disaster event and the occurrence of it, (as many as possible, at least 20 events) give time, location, and the event that happened.
-                including but not limited to people being trapped, weather changes, weakening communication signals, road destruction, and more. 
-                The format is like this:
-                # Disaster: xxx
-                [xx:xx] [xx°N, xx°E] XXX hits the city.
-                [xx:xx] [xx°N, xx°E] Buildings collapse, people are trapped....""".format(self.disaster),
-            agent=self.researcher
-        )
-        
         self.task3 = Task(
             description="""Write more reasonable events about the disaster.
                         You will use the information provided by the Disaster Generator and the Disaster Information Analyst,
