@@ -1,4 +1,3 @@
-from crewai import Agent, Task, Crew, Process
 from model import *
 
 class SimulationCrew():
@@ -29,7 +28,7 @@ class SimulationCrew():
                         [09:45] [39.15°N, 116°E] Road destruction, people are in panic.
                         this is just a format, the time and location are just an example.""",
             verbose=True,
-            llm=using_model, # Ollama model passed here
+            llm=simulation_model,
             allow_delegation=False,
         )
 
@@ -40,7 +39,7 @@ class SimulationCrew():
                         Your expertise lies in sorting out and documenting what happens at every moment and place during natural disasters.
                         You have a rich accumulation of events, understand what happens in various natural disasters, and have a knack for summarizing events.""",
             verbose=True,
-            llm=using_model,
+            llm=simulation_model,
             allow_delegation=False,
             tools=google_search_tool,
             # tools=[search_tool]
@@ -59,7 +58,7 @@ class SimulationCrew():
                         [time2] [location2] Weather changes, weakening communication signals.
                         [time3] [location3] Road destruction, people are in panic.""",
             verbose=True,
-            llm=using_model,
+            llm=simulation_model,
             allow_delegation=False,
         )
         
