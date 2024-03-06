@@ -6,14 +6,6 @@ The Satellite-Dispatch is an CrewAI-driven platform designed to facilitate disas
 
 The Satellite Emergency Response System comprises a set of AI agents simulating different types of satellites and a central control system for coordinating satellite operations during and after a disaster. These AI agents are responsible for tasks such as capturing imagery, monitoring weather conditions, maintaining communication, providing navigation services, recording satellite actions, and compiling post-disaster reports.
 
-## Features
-
-- Simulation of Earth observation, weather monitoring, communication, and navigation satellites
-- Coordination of satellite operations in response to natural disasters
-- Real-time monitoring of disaster-affected areas
-- Provision of critical data and insights to support emergency response efforts
-- Compilation of comprehensive post-disaster satellite emergency reports
-
 ## Installation
 
 1. Clone the repository:
@@ -28,7 +20,9 @@ git clone https://github.com/buaa-ysw/Satellite-Dispatch.git
 pip install -r requirements.txt
 ```
 
-3. Run the application:
+3. Select the model in config.ini and modify the .env.example file.
+
+4. Run the application:
 
 ```python
 python main.py
@@ -37,9 +31,7 @@ python main.py
 ## Usage
 
 1. Configure AI agents for each type of satellite according to specific disaster scenarios and objectives.
-2. Initiate the Satellite Emergency Response System in response to a natural disaster.
-3. Monitor satellite operations and adjust tasks as needed to support emergency response efforts.
-4. Compile post-disaster satellite emergency reports for analysis and future planning.
+2. Monitor satellite operations and adjust tasks as needed to support emergency response efforts.
 
 ## Contributing
 
