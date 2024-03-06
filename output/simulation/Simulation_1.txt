@@ -1,0 +1,21 @@
+# Disaster: Typhoon
+[July 29, 2023, 12:00] [40.7128°„N, 74.0060°„W] Typhoon Doksuri caused significant rainfall and flooding throughout at least 16 cities and provinces in northeastern China.
+[August 1, 2023, 09:00] [39.9042°„N, 116.4074°„E] Beijing and nearby cities stepped up rescue efforts after rains and floods disrupted services due to remnants of Typhoon Doksuri.
+[August 1, 2023, 15:30] [22.3193°„N, 114.1694°„E] Hong Kong was hit with deadly floods brought by a typhoon, experiencing a record level of rain since 1884.
+[August 6, 2023, 08:45] [45.5051°„N, 122.6750°„W] Oregon was cleaning up from a deadly storm, still facing extreme weather and natural disaster challenges.
+[August 9, 2023, 11:20] [14.5995°„N, 120.9842°„E] 10 people were reported dead in the Philippines, including 5 children, when a landslide buried a house.
+[August 12, 2023, 07:00] [7.2575°„S, 112.7521°„E] 23 climbers were feared dead in Indonesia's volcano eruption as more bodies were uncovered.
+[August 15, 2023, 13:40] [31.2304°„N, 121.4737°„E] Shanghai faced severe flooding and communication disruptions due to a typhoon hitting the region.
+[August 18, 2023, 10:15] [37.7749°„N, 122.4194°„W] San Francisco experienced power outages and road destruction following a typhoon passing through the area.
+[August 22, 2023, 14:50] [35.6895°„N, 139.6917°„E] Tokyo saw a significant increase in wind speeds and property damage as a typhoon made landfall in Japan.
+[August 25, 2023, 16:30] [25.0320°„N, 121.5654°„E] Taipei faced transportation disruptions and building collapses due to the impact of a typhoon on the city.
+[August 29, 2023, 09:00] [1.3521°„N, 103.8198°„E] Singapore experienced flash floods and road closures as a typhoon brought heavy rainfall to the city.
+[September 2, 2023, 11:30] [33.6844°„N, 117.8265°„W] Southern California dealt with mudslides and power outages following a typhoon that hit the region.
+[September 6, 2023, 14:20] [19.4326°„N, 99.1332°„W] Mexico City faced severe flooding and landslides caused by a typhoon, leading to multiple road closures.
+[September 10, 2023, 08:00] [30.0444°„N, 31.2357°„E] Cairo experienced strong winds and damage to buildings due to a typhoon passing through the area.
+[September 13, 2023, 15:10] [51.5074°„N, 0.1278°„W] London witnessed heavy rainfall and flooding in the city center as a typhoon impacted the region.
+[September 17, 2023, 12:45] [6.5244°„N, 3.3792°„E] Lagos faced power outages and communication disruptions following a typhoon passing through Nigeria.
+[September 21, 2023, 09:30] [33.8869°„N, 35.5134°„E] Beirut experienced landslides and building collapses due to heavy rainfall brought by a typhoon.
+[September 25, 2023, 08:20] [18.4655°„N, 66.1057°„W] Puerto Rico saw widespread flooding and road destruction after a typhoon hit the island.
+[September 29, 2023, 10:55] [55.7558°„N, 37.6176°„E] Moscow faced transportation disruptions and traffic accidents due to strong winds from a typhoon.
+[October 3, 2023, 13:15] [13.7563°„N, 100.5018°„E] Bangkok experienced severe flooding and water shortages following a typhoon that affected the city.
