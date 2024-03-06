@@ -67,6 +67,7 @@ class SimulationCrew():
             description="""{}, Find this kind of natural disasters and analyze documentarys about this.
                 Search for a specific disaster event and the occurrence of it, 
                 (as many as possible, at least 20 events) give time[xx:xx], locations[], and the events[] that happened.
+                Time and ongitude, latitude need to be more accurate or have fluctuations.
                 including but not limited to people being trapped, weather changes, weakening communication signals, road destruction, and more. 
                 Search for a specific disaster event and the occurrence of it,
                 give time, location, and the event that happened.
@@ -86,6 +87,8 @@ class SimulationCrew():
                         They can be different, but the events should be reasonable, other natural disasters are also acceptable.
                         Using the information from the researcher, generate a series of reasonable events.
                         If it is not enough, you can generate some more reasonable events even it's not real.
+                        Time and longitude and latitude need to be more accurate, or have fluctuations.
+                        It's about a specific natural disaster, not two or more different disasters.
                         More details are needed to generate, including but not limited to people being trapped, weather changes, weakening communication signals, road destruction, and more. 
                         more events until the disaster stop or subsides. 
                         the format like this:
@@ -115,6 +118,7 @@ class SimulationCrew():
                         You will use the information provided by the Disaster Generator and the Disaster Information Analyst,
                         must including but not limited to people being trapped, weather changes, weakening communication signals, road destruction, and more.
                         or just create some new resonable information to create a detailed and engaging narrative.
+                        Time and longitude and latitude need to be more reasonable, more consistent with the real world and have fluctuations.
                         The format is like this:
                         # Disaster: XXX
                         [time1] [°N, °E] XXX hits the city.
