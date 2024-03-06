@@ -1,3 +1,4 @@
+from init import *
 from model import *
 from agents import SatelliteAgents
 from tasks import SatelliteTasks
