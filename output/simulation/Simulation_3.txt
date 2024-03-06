@@ -1,0 +1,20 @@
+# Disaster: Typhoon Doksuri in Northeastern China
+[July 29, 2023, 12:00] [24.8801°„N, 114.0579°„E] Typhoon Doksuri causes significant rainfall and flooding throughout at least 16 cities and provinces in northeastern China.
+[July 30, 2023, 09:00] [25.1500°„N, 114.3000°„E] Continuous heavy rainfall leads to widespread flooding in urban areas, forcing evacuation orders.
+[July 30, 2023, 12:30] [24.9500°„N, 114.1000°„E] Landslides occur in mountainous regions due to the saturated soil from the typhoon's rainfall, cutting off access roads.
+[July 31, 2023, 15:00] [24.7000°„N, 114.5000°„E] Strong winds from the typhoon cause power outages across multiple cities, affecting communication networks.
+[August 1, 2023, 08:00] [24.6000°„N, 114.8000°„E] Floodwaters breach riverbanks, submerging agricultural fields and causing extensive crop damage.
+[August 2, 2023, 10:30] [24.8000°„N, 114.2000°„E] Emergency responders rescue stranded residents from rooftops as floodwaters continue to rise.
+[August 3, 2023, 13:45] [24.9500°„N, 114.1000°„E] Water levels in major rivers exceed critical levels, leading to more widespread flooding in low-lying areas.
+[August 4, 2023, 11:20] [24.7500°„N, 114.3000°„E] Damaging mudslides occur in hilly terrain, destroying homes and blocking key transportation routes.
+[August 5, 2023, 14:00] [24.8500°„N, 114.0000°„E] Emergency shelters reach maximum capacity as thousands of displaced residents seek refuge from the disaster.
+[August 6, 2023, 16:30] [24.6000°„N, 114.5000°„E] Heavy rainfall persists, hampering ongoing rescue and relief efforts in the affected regions.
+[August 7, 2023, 10:45] [24.9000°„N, 114.1000°„E] Waterborne diseases become a concern as contaminated floodwaters spread, prompting health advisories.
+[August 8, 2023, 09:15] [24.7000°„N, 114.4000°„E] Communication towers suffer damage, further hindering emergency communication and coordination.
+[August 9, 2023, 12:00] [24.8000°„N, 114.2000°„E] The typhoon weakens but residual rainfall prolongs the flooding, prolonging the recovery process.
+[August 10, 2023, 14:30] [24.9500°„N, 114.0000°„E] Evacuation efforts intensify as forecasted rain threatens to exacerbate the already dire situation.
+[August 11, 2023, 16:00] [24.7500°„N, 114.3000°„E] Relief supplies arrive via air drops to isolated communities cut off by damaged roads and bridges.
+[August 12, 2023, 10:00] [24.8500°„N, 114.1000°„E] Water levels slowly recede, revealing the extent of damage to infrastructure and homes in the aftermath.
+[August 13, 2023, 12:45] [24.7000°„N, 114.5000°„E] Cleanup and recovery efforts begin as residents return to assess and rebuild their damaged properties.
+[August 14, 2023, 14:20] [24.9000°„N, 114.2000°„E] The local government initiates long-term flood prevention measures to mitigate the impact of future disasters.
+[August 15, 2023, 16:30] [24.8000°„N, 114.4000°„E] The region gradually begins to recover as normalcy slowly returns after the devastating typhoon event.

@@ -1,6 +1,6 @@
 import os
 
-def save_simulation_result_ori(simulation_result, folder_path):
+def save_simulation_result(simulation_result, folder_path):
     file_name = "Simulation_1.txt"
     file_path = os.path.join(folder_path, file_name)
     
@@ -19,7 +19,7 @@ def save_simulation_result_ori(simulation_result, folder_path):
     with open(file_path, "w") as file:
         file.write(simulation_result)
 
-def save_simulation_result(simulation_result, folder_path):
+def save_simulation_result_with_name(simulation_result, folder_path):
     # Extract the first line of the simulation result
     first_line = simulation_result.split('\n')[0]
 
