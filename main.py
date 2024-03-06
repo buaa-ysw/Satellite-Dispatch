@@ -19,7 +19,8 @@ class SatelliteCrew:
         weather_monitoring_agent = agents.weather_monitoring_agent()
         communication_agent = agents.communication_agent()
         navigation_agent = agents.navigation_agent()
-        recoder_agent = agents.recoder_agent()
+        recorder_agent = agents.recorder_agent()
+        collator_agent = agents.collator_agent()
 
         # Define tasks
         earth_observation_task = tasks.earth_observation_task(earth_observation_agent, self.disaster, self.report)
@@ -28,12 +29,14 @@ class SatelliteCrew:
         navigation_task = tasks.navigation_task(navigation_agent, self.disaster, self.report)
         
         context = [earth_observation_task, weather_monitoring_task, communication_task, navigation_task]
-        report_writing_task = tasks.report_writing_task(recoder_agent, self.disaster, context)
+        report_writing_task = tasks.report_writing_task(recorder_agent, self.disaster, context)
+        
+        report_collating_task = tasks.report_collating_agent(collator_agent, self.disaster, self.report, report_writing_task)
         
         # Define crew
         crew = Crew(
-            agents=[earth_observation_agent, weather_monitoring_agent, communication_agent, navigation_agent, recoder_agent],
-            tasks=[earth_observation_task, weather_monitoring_task, communication_task, navigation_task, report_writing_task],
+            agents=[earth_observation_agent, weather_monitoring_agent, communication_agent, navigation_agent, recorder_agent, collator_agent],
+            tasks=[earth_observation_task, weather_monitoring_task, communication_task, navigation_task, report_writing_task, report_collating_task],
             manager_llm=self.model,
             process=Process.sequential,
             verbose=2,
