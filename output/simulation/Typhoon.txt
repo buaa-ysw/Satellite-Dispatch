@@ -1,0 +1,20 @@
+# Disaster: Typhoon
+[July 29, 2023, 00:00] [16 cities and provinces in northeastern China] Typhoon Doksuri causes significant rainfall and flooding in multiple cities and provinces.
+[July 29, 2023, 03:00] [40.0��N, 116.4��E] Record-breaking rainfall induced by Typhoon Doksuri leads to flooding in Beijing and Hebei Province, resulting in 11 deaths in Beijing and 9 deaths in Hebei Province.
+[July 29, 2023, 06:00] [39.9��N, 116.1��E] Thousands of residents in Beijing evacuated as Typhoon Doksuri brings torrential rain and flash floods.
+[July 29, 2023, 09:00] [39.8��N, 115.8��E] Buildings collapse in Beijing due to the heavy rainfall, trapping people inside.
+[July 29, 2023, 12:00] [39.7��N, 115.5��E] Weather conditions worsen, leading to weakening communication signals in the affected areas.
+[July 29, 2023, 15:00] [39.6��N, 115.2��E] Road infrastructure in Beijing is severely damaged by the flooding, causing chaos and panic among residents.
+[July 29, 2023, 18:00] [39.5��N, 114.9��E] Emergency services struggle to reach trapped individuals in Beijing as the floodwaters continue to rise.
+[July 29, 2023, 21:00] [39.4��N, 114.6��E] Power outages reported in several areas of Beijing as a result of the typhoon's impact on the electrical grid.
+[July 30, 2023, 00:00] [39.3��N, 114.3��E] Relief efforts underway in Beijing as rescue teams work to evacuate stranded residents from flooded areas.
+[July 30, 2023, 03:00] [39.2��N, 114.0��E] Water levels in Beijing start to recede slowly, but the damage is extensive, requiring significant reconstruction efforts.
+[July 30, 2023, 06:00] [39.1��N, 113.7��E] Lingering effects of Typhoon Doksuri continue to impact Beijing, hampering recovery and cleanup operations.
+[September 11, 2023, 00:00] [Southern China] Heavy rains for the seventh consecutive day due to a typhoon cause flooding and trap residents.
+[September 11, 2023, 03:00] [23.0��N, 113.0��E] Residents in southern China evacuate as floodwaters rise, breaking 12-year-old records in Fuzhou.
+[September 11, 2023, 06:00] [23.1��N, 113.3��E] Rescue workers in southern China assist in evacuating residents as 49 reservoirs exceed flood limits.
+[September 11, 2023, 09:00] [23.2��N, 113.6��E] Continued heavy rainfall in southern China poses challenges to rescue operations and infrastructure stability.
+[September 11, 2023, 12:00] [23.3��N, 113.9��E] Red typhoon warning issued by the China Meteorological Administration as the impact of the typhoon intensifies.
+[September 11, 2023, 15:00] [23.4��N, 114.2��E] Critical situation in southern China as the relentless rain from the typhoon shows no signs of abating.
+[September 11, 2023, 18:00] [23.5��N, 114.5��E] International aid efforts initiated to support the affected regions in southern China facing the typhoon-related flooding.
+[September 11, 2023, 21:00] [23.6��N, 114.8��E] Collaboration between local authorities and relief agencies intensifies as the communities in southern China struggle with the ongoing disaster.

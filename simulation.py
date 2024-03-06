@@ -1,4 +1,6 @@
+from init import *
 from model import *
+from function import save_simulation_result
 
 class SimulationCrew():
     def __init__(self, disaster):
@@ -30,6 +32,8 @@ class SimulationCrew():
             verbose=True,
             llm=simulation_model,
             allow_delegation=False,
+            # tools=google_search_tool,
+            tools=[search_tool]
         )
 
         self.researcher = Agent(
@@ -41,44 +45,45 @@ class SimulationCrew():
             verbose=True,
             llm=simulation_model,
             allow_delegation=False,
-            tools=google_search_tool,
-            # tools=[search_tool]
+            # tools=google_search_tool,
+            tools=[search_tool]
         )
 
-        self.writer = Agent(
-            role='Disaster Information Writer',
-            goal='Write a series of reasonable events about a disaster.',
-            backstory="""You are a writer who specializes in creating narratives about natural disasters. 
-                        Your task is to continue to generate more reasonable times, places, and events in this disaster.
-                        You will use the information provided by the Disaster Generator and the Disaster Information Analyst,
-                        or just create some new resonable information to create detailed messages.
-                        The format of each message is like this:
-                        # Disaster: XXX
-                        [time1] [location1] Buildings collapse, people are trapped.
-                        [time2] [location2] Weather changes, weakening communication signals.
-                        [time3] [location3] Road destruction, people are in panic.""",
-            verbose=True,
-            llm=simulation_model,
-            allow_delegation=False,
-        )
+        # self.writer = Agent(
+        #     role='Disaster Information Writer',
+        #     goal='Write more reasonable events about a disaster.',
+        #     backstory="""You are a writer who specializes in creating narratives about natural disasters. 
+        #                 Your task is to continue to generate more reasonable times, places, and events in this disaster.
+        #                 You will use the information provided by the Disaster Generator and the Disaster Information Analyst,
+        #                 or just create some new resonable information to create detailed messages.
+        #                 Be as consistent as possible with the content provided by Disaster Generator and maintain authenticity as much as possible.
+        #                 The format of each message is like this:
+        #                 # Disaster: XXX
+        #                 [time1] [location1] Buildings collapse, people are trapped.
+        #                 [time2] [location2] Weather changes, weakening communication signals.
+        #                 [time3] [location3] Road destruction, people are in panic.""",
+        #     verbose=True,
+        #     llm=simulation_model,
+        #     allow_delegation=False,
+        # )
         
     def __create_tasks(self):
         self.task1 = Task(
-            description="""{}, Find this kind of natural disasters and analyze documentarys about this.
-                Search for a specific disaster event and the occurrence of it, 
-                (as many as possible, at least 20 events) give time[xx:xx], locations[], and the events[] that happened.
-                Time and ongitude, latitude need to be more accurate or have fluctuations.
-                including but not limited to people being trapped, weather changes, weakening communication signals, road destruction, and more. 
-                Search for a specific disaster event and the occurrence of it,
-                give time, location, and the event that happened.
-                """.format(self.disaster),
-            expected_output="""{}, Find this kind of natural disasters and analyze documentarys about this.
-                Search for just one specific disaster event and the occurrence of it, (as many as possible, at least 20 events) give time, location, and the event that happened.
-                including but not limited to people being trapped, weather changes, weakening communication signals, road destruction, and more. 
-                The format is like this:
-                # Disaster: xxx
-                [xx:xx] [xx°N, xx°E] XXX hits the city.
-                [xx:xx] [xx°N, xx°E] Buildings collapse, people are trapped....""".format(self.disaster),
+            description="""Search and Analyze News Related to {} Natural Disasters:
+                        - Search for news articles covering various types of natural disasters.
+                        - Analyze the news to identify significant events related to the chosen disaster.
+                        - Provide detailed accounts of at least 10 events, including time, location, and description.
+                        - Ensure accuracy in time, longitude, and latitude details, allowing for fluctuations.
+                        - Events may include people being trapped, weather changes, communication disruptions, road destruction, etc.
+                        """.format(self.disaster),
+            expected_output="""List Detailed Events of {} Disaster:
+                            - Provide time, location, and description for at least 10 significant events.
+                            - Ensure accuracy in time, longitude, and latitude details.
+                            - Include descriptions such as people being trapped, weather changes, communication disruptions, road destruction, etc.
+                            Format Example:
+                            # Disaster: {}
+                            [August 6, 2023, 09:03] [24.8801°N, 114.0579°E] XXX hits the city.
+                            [time2] [xx°N, xx°E] Buildings collapse, people are trapped....""".format(self.disaster, self.disaster),
             agent=self.researcher
         )
         
@@ -87,61 +92,53 @@ class SimulationCrew():
                         They can be different, but the events should be reasonable, other natural disasters are also acceptable.
                         Using the information from the researcher, generate a series of reasonable events.
                         If it is not enough, you can generate some more reasonable events even it's not real.
-                        Time and longitude and latitude need to be more accurate, or have fluctuations.
-                        It's about a specific natural disaster, not two or more different disasters.
+                        Time and longitude and latitude need to be more accurate, must have reasonable fluctuations within a resonable range!
                         More details are needed to generate, including but not limited to people being trapped, weather changes, weakening communication signals, road destruction, and more. 
-                        more events until the disaster stop or subsides. 
+                        more events until the disaster stop. 
                         the format like this:
                         # Disaster: XXX
-                        [09:00] [40.15°N, 116°E] XXX hits the city.
-                        [09:15] [40.55°N, 116°E] Buildings collapse, people are trapped.
-                        [09:30] [40.85°N, 116°E] Weather changes, weakening communication signals.
-                        [09:45] [41.15°N, 116°E] Road destruction, people are in panic.
+                        [August 6, 2023, 09:03] [24.8801°N, 114.0579°E] XXX hits the city.
+                        [time2] [xx°N, xx°E] Buildings collapse, people are trapped.
+                        [time2] [xx°N, xx°E] Weather changes, weakening communication signals.
+                        [time2] [xx°N, xx°E] Road destruction, people are in panic.
                         this is just a format, the time and location are just an example.""",
             expected_output="""Using the information from the researcher, generate a series of reasonable events about the disaster. 
+                        If the information is about several disasters, just choose one of them to generate the events!
                         this is just a format, the time and location are just an example.
                         They can be different, but the events should be reasonable.
+                        Time and longitude and latitude need to be more accurate, must have reasonable fluctuations within a resonable range!
                         Using the information from the researcher, generate a series of reasonable events about the disaster.
                         If it is not enough, you can generate some more reasonable events even it's not real.
                         More details are needed to generate, including but not limited to people being trapped, weather changes, weakening communication signals, road destruction, and more. 
                         more events (at least 20 events) until the disaster stop or subsides.
                         the format like this:
                         # Disaster: XXX
-                        [time1] [°N, °E] XXX hits the city.
+                        [August 6, 2023, 09:03] [24.8801°N, 114.0579°E] XXX hits the city.
                         [time2] [°N, °E] Buildings collapse, people are trapped.
                         [time3] [°N, °E] Weather changes, weakening communication signals.""",
             agent=self.generator
         )
 
-        self.task3 = Task(
-            description="""Write more reasonable events about the disaster.
-                        You will use the information provided by the Disaster Generator and the Disaster Information Analyst,
-                        must including but not limited to people being trapped, weather changes, weakening communication signals, road destruction, and more.
-                        or just create some new resonable information to create a detailed and engaging narrative.
-                        Time and longitude and latitude need to be more reasonable, more consistent with the real world and have fluctuations.
-                        The format is like this:
-                        # Disaster: XXX
-                        [time1] [°N, °E] XXX hits the city.
-                        [time2] [°N, °E] Buildings collapse, people are trapped.
-                        [time3] [°N, °E] Weather changes, weakening communication signals.
-                        """,
-            expected_output="""Output at least 20 different time, locations and events, 
-                        must be reasonable, and must include the information about people being trapped, weather changes, weakening communication signals, road destruction, and more.
-                        the format is like this:
-                        # Disaster: XXX
-                        [time1] [°N, °E] XXX hits the city.
-                        [time2] [°N, °E] Buildings collapse, people are trapped.
-                        [time3] [°N, °E] Weather changes, weakening communication signals.""",
-            agent=self.writer
-        )
+        # self.task3 = Task(
+        #     description="""Expand content generated by Disaster Generator. According to the content, write new times, locations, and events between events. 
+        #                 They must be logical, reasonable, and consistent with the content provided by the Disaster Generator.
+        #                 Make sure they include people being trapped, weather changes, weakening communication signals, road destruction, and more.
+        #                 The format is the same as the content generated by Disaster Generator.
+        #                 """,
+        #     expected_output="""An extension of the content generated by the Disaster Generator, 
+        #                     adding new events (at least 20, include people being trapped, weather changes, weakening communication signals, road destruction, and more) 
+        #                     between events and keeping the format unchanged""",
+        #     agent=self.writer
+        # )
         
     def run(self):
         crew = Crew(
-            agents=[self.researcher, self.generator, self.writer],
-            tasks=[self.task1, self.task2, self.task3 ],
+            agents=[self.researcher, self.generator],
+            tasks=[self.task1, self.task2 ],
             verbose=2, # You can set it to 1 or 2 to different logging levels
         )
         simulation_result = crew.kickoff()
+        save_simulation_result(simulation_result, simulation_output_path)
         return simulation_result
 
 if __name__ == "__main__":
@@ -154,3 +151,6 @@ if __name__ == "__main__":
 
     simulation = SimulationCrew(disaster=disaster_type)
     simulation.run()
+    print("######################")
+    print("## Simulation Finished")
+    print("######################")
