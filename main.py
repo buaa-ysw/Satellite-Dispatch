@@ -47,13 +47,18 @@ class SatelliteCrew:
 
 # This is the main function that you will use to run your custom crew.
 if __name__ == "__main__":
-    print("## Satellite Dispatch Here")
-    print("-------------------------------")
+    print("## Satellite Dispatch Here ##")
+    print("----------------------------------------")
     disaster = input(dedent("""We will be modelling a satellite scheduling mission following a disaster, please describe in detail the TYPE, SCALE and TIME of the disaster:"""))
 
     satellite_crew = SatelliteCrew(disaster)
     result = satellite_crew.run()
-    print("\n\n########################")
-    print("## Here is Satellite Dispatch run result:")
-    print("########################\n")
+    print("\n\n---------------------------------------------------")
+    print("############################")
+    print("## The disaster you input ##")
+    print("############################\n")
+    print(disaster)
+    print("\n\n#####################################")
+    print("## Satellite Dispatch run complete ##")
+    print("#####################################\n")
     print(result)
