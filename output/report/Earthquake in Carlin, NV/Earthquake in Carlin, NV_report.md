@@ -51,6 +51,7 @@ Intermittent disruptions reported due to damaged infrastructure, functioning opt
 - **Operational status:**
 Normal operation, delivering precise navigation assistance to support emergency response and recovery efforts.
 
-## Summary  
+## Summary
+
 The Earth Observation Satellite captured the progression of damage in Carlin, aiding in response planning. The Weather Monitoring Satellite tracked adverse weather conditions, impacting rescue operations. The Communication Satellite faced disruptions but restored services for emergency coordination. The Navigation Satellite provided crucial assistance in guiding rescue and recovery efforts. Despite challenges, the satellite system played a vital role in supporting post-disaster operations, ensuring efficient response and coordination in the aftermath of the earthquake. Further improvements can enhance the system's resilience for future emergencies.
 -------------------------
