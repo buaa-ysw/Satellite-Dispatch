@@ -232,6 +232,7 @@ class SatelliteTasks:
                 - Each event node starts with the exact time and distance from the moment it occurred, and ends with over.
                 - The evolution of the disaster is in italics and placed at the beginning of the event node (if any).
                 - If the satellite operating status changes, list it in the event node with exclamation marks on the left and right sides.
+                - Be sure to add the time interval from the disaster to each time.
                 {self.__tip_section()}
                 """),
             expected_output=dedent("""
