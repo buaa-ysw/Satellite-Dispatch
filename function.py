@@ -49,7 +49,7 @@ def save_simulation_result_with_name(simulation_result, folder_path):
     
     return disaster_name
 
-def save_report_with_name(report, context, folder_path, disaster_name):
+def save_report_with_name(report, events, folder_path, disaster_name):
     # Save the report as .md file
     report_file_name = f"{disaster_name}_report.md"
     report_file_path = os.path.join(folder_path, report_file_name)
@@ -60,4 +60,4 @@ def save_report_with_name(report, context, folder_path, disaster_name):
     context_file_name = f"{disaster_name}_events.md"
     context_file_path = os.path.join(folder_path, context_file_name)
     with open(context_file_path, "w") as context_file:
-        context_file.write(context)
+        context_file.write(events)

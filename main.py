@@ -51,7 +51,7 @@ class SatelliteCrew:
 
         result = crew.kickoff()
         # save_context_with_name(context, self.report_path, self.disaster_name)
-        save_report_with_name(result, report_writing_task.output.raw_output, self.report_path, self.disaster_name)
+        save_report_with_name(report_writing_task.output.raw_output, result, self.report_path, self.disaster_name)
         print(crew.usage_metrics)
         return result
 
