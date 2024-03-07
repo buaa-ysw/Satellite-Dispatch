@@ -1,6 +1,8 @@
 -------------------------
 # Carlin Earthquake Satellite Emergency Reporting
+
 ---
+
 ------------------------- *[1:02:46 PM (PST)]* -------------------------
 *Minor earthquake of magnitude 3.8 occurs 41 km (25 miles) SSW of Carlin, NV*.
                     **Earth Observation Satellite**
