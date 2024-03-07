@@ -36,7 +36,9 @@ python main.py
 A minor earthquake occurred at 1:02:46 PM (PST) on Monday, March 4, 2024. The magnitude 3.8 event occurred 41 km (25 miles) SSW of Carlin, NV. The hypocentral depth is 10 km ( 6 miles).
 ```
 
-[Earthquake in Carlin, NV_events.md]: output/report/Earthquake in Carlin, NV/Earthquake in Carlin, NV_events.md
+
+
+[report_events]:https://github.com/buaa-ysw/Satellite-Dispatch/blob/main/output/report/Earthquake%20in%20Carlin%2C%20NV/Earthquake%20in%20Carlin%2C%20NV_events.md
 
 
 ## Usage
