@@ -136,8 +136,8 @@ class SimulationCrew():
             verbose=2, # You can set it to 1 or 2 to different logging levels
         )
         simulation_result = crew.kickoff()
-        disaster_name = save_simulation_result_with_name(simulation_result, simulation_output_path)
-        return disaster_name, simulation_result
+        disaster_name, fold_path = save_simulation_result_with_name(simulation_result, output_path)
+        return disaster_name, fold_path, simulation_result
 
 if __name__ == "__main__":
     print("######################")

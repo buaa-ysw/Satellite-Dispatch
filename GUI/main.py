@@ -94,8 +94,8 @@ with ui.splitter(value=12).classes('w-full h-full') as splitter:
             #---------------------------------------------------------------------------------------------------------------------------------------------------#
                     
             with ui.tab_panel(galley):
-                # ui.label('Galley').classes('text-h4')
-                ui.label('Content of movies')
+                ui.label('Galley').classes('text-h6')
+                ui.label('History of Satellite-Dispatch processing...')
 
             #---------------------------------------------------------------------------------------------------------------------------------------------------#
                 

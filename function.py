@@ -19,7 +19,7 @@ def save_simulation_result_ori(simulation_result, folder_path):
     with open(file_path, "w") as file:
         file.write(simulation_result)
 
-def save_simulation_result_with_name(simulation_result, folder_path):
+def save_simulation_result_with_name(simulation_result, folder_path_ori):
     # Extract the first line of the simulation result
     first_line = simulation_result.split('\n')[0]
 
@@ -30,24 +30,27 @@ def save_simulation_result_with_name(simulation_result, folder_path):
         disaster_name = "Simulation_ErrorName"
 
     # Create the file name
-    file_name = f"{disaster_name}.txt"
+    file_name = f"Simulation_{disaster_name}.txt"
 
-    # Check if the file already exists
-    if os.path.exists(os.path.join(folder_path, file_name)):
-        # Find the next available file name
+    # Check if the folder exists, and create it if it doesn't
+    folder_path = folder_path_ori + "/" + disaster_name
+    if os.path.exists(folder_path):
+        # Find the next available folder name
         i = 2
         while True:
-            file_name = f"{disaster_name}_{i}.txt"
-            if not os.path.exists(os.path.join(folder_path, file_name)):
+            folder_path = folder_path_ori + "/" + f"{disaster_name}_{i}"
+            if not os.path.exists(folder_path):
                 break
             i += 1
+
+    os.makedirs(folder_path, exist_ok=True)
 
     # Save the simulation result to the file
     file_path = os.path.join(folder_path, file_name)
     with open(file_path, "w") as file:
         file.write(simulation_result)
     
-    return disaster_name
+    return disaster_name, folder_path
 
 def save_report_with_name(report, events, folder_path, disaster_name):
     # Save the report as .md file
