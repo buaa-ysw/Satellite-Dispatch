@@ -97,7 +97,7 @@ class SatelliteAgents:
     def collator_agent(self):
         return Agent(
             role='Post-disaster Collator',
-            goal='Collate the final post-disaster emergency response report',
+            goal='Collate the final post-disaster emergency response report (events)',
             backstory=dedent("""
                 Attention! A major natural disaster is currently occurring!
                 As a conscientious Post-disaster Collator, you will receive the final post-disaster emergency response report from The Recoder Agent.

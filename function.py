@@ -57,7 +57,7 @@ def save_report_with_name(report, context, folder_path, disaster_name):
         report_file.write(report)
 
     # Save the context as .md file
-    context_file_name = f"{disaster_name}_context.md"
+    context_file_name = f"{disaster_name}_events.md"
     context_file_path = os.path.join(folder_path, context_file_name)
     with open(context_file_path, "w") as context_file:
         context_file.write(context)
