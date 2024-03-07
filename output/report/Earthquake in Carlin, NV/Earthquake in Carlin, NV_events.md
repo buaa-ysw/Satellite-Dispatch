@@ -6,13 +6,13 @@
 ------------------------- *[1:02:46 PM (PST)]* -------------------------
 
 *Minor earthquake of magnitude 3.8 occurs 41 km (25 miles) SSW of Carlin, NV*.    
-&nbsp **Earth Observation Satellite**  
+                    **Earth Observation Satellite**  
 "Buildings and trees began to shake."    
-&nbsp **Weather Monitoring Satellite**  
+                    **Weather Monitoring Satellite**  
 "The sky is clouded over."    
-&nbsp **Communication Satellite**  
+                    **Communication Satellite**  
 "Minor disturbances occur."    
-&nbsp **Navigation Satellite**  
+                    **Navigation Satellite**  
 "Precise positioning data provided to guide search and rescue teams."    
 
 -------------------------------------- *[over]* --------------------------------------
