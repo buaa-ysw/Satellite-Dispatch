@@ -4,8 +4,7 @@
 
 ## Disaster Situation
 
-<span style="color:green; font-style:italic">[1:02:46 PM (PST)]</span>
- A minor earthquake of magnitude 3.8 occurred 41 km (25 miles) SSW of Carlin, NV, with a hypocentral depth of 10 km (6 miles).
+  _[1:02:46 PM (PST)]_ A minor earthquake of magnitude 3.8 occurred 41 km (25 miles) SSW of Carlin, NV, with a hypocentral depth of 10 km (6 miles).
 
 ## Satellite Reports
 
