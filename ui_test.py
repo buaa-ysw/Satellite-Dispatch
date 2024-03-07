@@ -4,12 +4,19 @@ import tkinter as tk
 from tkinter import ttk
 
 import sv_ttk
+import ctypes
 
 def ui_thread():
+    #告诉操作系统使用程序自身的dpi适配
+    ctypes.windll.shcore.SetProcessDpiAwareness(1)
+    #获取屏幕的缩放因子
+    ScaleFactor=ctypes.windll.shcore.GetScaleFactorForDevice(0)
     # Create the main window
     root = tkinter.Tk()
+    #设置程序缩放
+    root.tk.call('tk', 'scaling', ScaleFactor/75)
     root.title("UI Example")
-
+    root.geometry("1500x900")
     # 设置窗口自适应大小
     root.grid_rowconfigure(0, weight=1)
     root.grid_columnconfigure(0, weight=1)
@@ -99,7 +106,7 @@ def ui_thread():
     right_frame.grid_columnconfigure(0, weight=1)
 
     # This is where the magic happens
-    sv_ttk.set_theme("light")  # or "dark"
+    sv_ttk.set_theme("dark")  # or "dark"
 
     root.mainloop()
 
