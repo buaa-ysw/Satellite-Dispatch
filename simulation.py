@@ -137,7 +137,7 @@ class SimulationCrew():
         )
         simulation_result = crew.kickoff()
         disaster_name, fold_path = save_simulation_result_with_name(simulation_result, output_path)
-        return disaster_name, fold_path, simulation_result
+        return self.disaster, disaster_name, fold_path, simulation_result
 
 if __name__ == "__main__":
     print("######################")

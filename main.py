@@ -7,13 +7,11 @@ from simulation import SimulationCrew
 import os
 
 class SatelliteCrew:
-    def __init__(self, disaster):
+    def __init__(self, disaster, disaster_name, fold_path, report):
         self.disaster = disaster
-        simulation_report = SimulationCrew(disaster)
-        self.disaster_name, self.report = simulation_report.run()
-        # Create directory for report output
-        self.report_path = report_output_path + "/" + self.disaster_name
-        os.makedirs(self.report_path, exist_ok=True)
+        self.disaster_name = disaster_name
+        self.fold_path = fold_path
+        self.report = report
         self.model = using_model
 
     def run(self):
@@ -51,10 +49,14 @@ class SatelliteCrew:
 
         result = crew.kickoff()
         # save_context_with_name(context, self.report_path, self.disaster_name)
-        save_report_with_name(report_writing_task.output.raw_output, result, self.report_path, self.disaster_name)
+        save_report_with_name(report_writing_task.output.raw_output, result, self.fold_path, self.disaster_name)
         print(crew.usage_metrics)
         return result
 
+def simulate_disaster(disaster):
+    simulation = SimulationCrew(disaster=disaster)
+    disaster, disaster_name, fold_path, simulation_result = simulation.run()
+    return disaster, disaster_name, fold_path, simulation_result
 
 # This is the main function that you will use to run your custom crew.
 if __name__ == "__main__":
@@ -62,7 +64,8 @@ if __name__ == "__main__":
     print("----------------------------------------")
     disaster = input(dedent("""We will be modelling a satellite scheduling mission following a disaster, please describe in detail the TYPE, SCALE and TIME of the disaster:"""))
 
-    satellite_crew = SatelliteCrew(disaster)
+    temp_disaster, temp_disaster_name, temp_fold_path, temp_simulation_result = simulate_disaster(disaster)
+    satellite_crew = SatelliteCrew(temp_disaster, temp_disaster_name, temp_fold_path, temp_simulation_result)
     result = satellite_crew.run()
     print("\n\n---------------------------------------------------")
     print("############################")
