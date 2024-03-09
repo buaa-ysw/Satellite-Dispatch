@@ -1,6 +1,7 @@
 import requests
 from datetime import datetime
 import pytz
+import os
 
 def sync_info():
     url = "https://api.github.com/repos/buaa-ysw/Satellite-Dispatch"
@@ -27,11 +28,15 @@ build_time, name_title = sync_info()
 
 
 
-# https://fonts.google.com/icons?icon.set=Material+Icons
 
 from nicegui import ui
 
 dark = ui.dark_mode()
+
+from init import output_path
+
+# https://fonts.google.com/icons?icon.set=Material+Icons
+
 
 with ui.left_drawer(value=False, bordered=True).style('background-color: #ebf1fa').props('bordered') as ui_left_drawer:
     ui.button('Dash Board').props('flat color=black')
@@ -96,6 +101,33 @@ with ui.splitter(value=12).classes('w-full h-full') as splitter:
             with ui.tab_panel(galley):
                 ui.label('Galley').classes('text-h6')
                 ui.label('History of Satellite-Dispatch processing...')
+                
+                # 获取output_path路径下的所有文件夹
+                folders = [folder for folder in os.listdir(output_path) if os.path.isdir(os.path.join(output_path, folder))]
+
+                # 为每个文件夹创建一个ui.expansion
+                for folder in folders:
+                    with ui.expansion(folder, icon='folder').classes('w-full'):
+                        # 获取output_path + folder文件夹下的所有文件
+                        folder_path = os.path.join(output_path, folder)
+                        files = [file for file in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, file))]
+                        # 为每个文件创建一个ui.expansion
+                        for file in files:
+                            file_path = os.path.join(folder_path, file)
+                            file_extension = os.path.splitext(file)[1]
+                            if file_extension == '.md':
+                                icon = 'summarize'
+                            elif file_extension == '.txt':
+                                icon = 'text_snippet'
+                            else:
+                                icon = 'file'
+                                pass
+                            # Add file content here
+                            
+                            with open(file_path, 'r') as f:
+                                content = f.read()
+                            with ui.expansion(file, icon=icon).classes('w-full'):
+                                ui.markdown(content)
 
             #---------------------------------------------------------------------------------------------------------------------------------------------------#
                 

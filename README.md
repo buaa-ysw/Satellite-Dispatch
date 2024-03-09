@@ -54,3 +54,10 @@ Contributions to the Satellite Emergency Response System project are welcome! If
 
 - This project was inspired by the need for advanced technology solutions to support disaster response and recovery efforts.
 - Special thanks to the developers and contributors who have helped make this project possible.
+
+
+1. 卫星轨道仿真（获取经纬度）
+2. Google地图照片获取
+3. 飞机位置设定＆贴图
+4. Agent调试下
+5. 通信
