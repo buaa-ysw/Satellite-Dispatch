@@ -36,9 +36,9 @@ python main.py
 *[November 8, 2013]* A major natural disaster, including strong winds, heavy rainfall, storm surge, landslides, and flash floods, has struck multiple regions, causing widespread damage and displacing numerous residents.
 ```
 
-- [Report](https://github.com/buaa-ysw/Satellite-Dispatch/blob/main/output/Typhoon Haiyan in the Philippines/report_Typhoon Haiyan in the Philippines.md)
+- [Report](https://github.com/buaa-ysw/Satellite-Dispatch/blob/main/output/Typhoon%20Haiyan%20in%20the%20Philippines/report_Typhoon%20Haiyan%20in%20the%20Philippines.md)
 
-- [Report (events)](https://github.com/buaa-ysw/Satellite-Dispatch/blob/main/output/Typhoon Haiyan in the Philippines/events_Typhoon Haiyan in the Philippines.md)
+- [Report (events)](https://github.com/buaa-ysw/Satellite-Dispatch/blob/main/output/Typhoon%20Haiyan%20in%20the%20Philippines/events_Typhoon%20Haiyan%20in%20the%20Philippines.md)
 
 ## Usage
 
