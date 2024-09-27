@@ -33,13 +33,12 @@ python main.py
 ## Example
 
 ```
-A minor earthquake occurred at 1:02:46 PM (PST) on Monday, March 4, 2024. The magnitude 3.8 event occurred 41 km (25 miles) SSW of Carlin, NV. The hypocentral depth is 10 km ( 6 miles).
+*[November 8, 2013]* A major natural disaster, including strong winds, heavy rainfall, storm surge, landslides, and flash floods, has struck multiple regions, causing widespread damage and displacing numerous residents.
 ```
 
-- [Report](https://github.com/buaa-ysw/Satellite-Dispatch/blob/main/output/report/Earthquake%20in%20Carlin%2C%20NV/Earthquake%20in%20Carlin%2C%20NV_report.md)
+- [Report](https://github.com/buaa-ysw/Satellite-Dispatch/blob/main/output/Typhoon Haiyan in the Philippines/report_Typhoon Haiyan in the Philippines.md)
 
-- [Report (events)](https://github.com/buaa-ysw/Satellite-Dispatch/blob/main/output/report/Earthquake%20in%20Carlin%2C%20NV/Earthquake%20in%20Carlin%2C%20NV_events.md)
-
+- [Report (events)](https://github.com/buaa-ysw/Satellite-Dispatch/blob/main/output/Typhoon Haiyan in the Philippines/events_Typhoon Haiyan in the Philippines.md)
 
 ## Usage
 
@@ -54,10 +53,3 @@ Contributions to the Satellite Emergency Response System project are welcome! If
 
 - This project was inspired by the need for advanced technology solutions to support disaster response and recovery efforts.
 - Special thanks to the developers and contributors who have helped make this project possible.
-
-
-1. 卫星轨道仿真（获取经纬度）
-2. Google地图照片获取
-3. 飞机位置设定＆贴图
-4. Agent调试下
-5. 通信
